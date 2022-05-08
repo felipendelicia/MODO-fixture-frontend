@@ -1,7 +1,7 @@
 export const teams = [
     {
         id: '1',
-        name: 'La Nanoneta Mecánica',
+        name: 'La Nanoneta Mecanica',
         player_ids: ['1', '2', '3', '4', '5', '6', '7'],
         points: 0,
         wins: 0,
