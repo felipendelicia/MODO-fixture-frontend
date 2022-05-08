@@ -4,6 +4,11 @@
   font-family: "Roboto-regular";
 }
 
+a{
+  text-decoration: inherit;
+  color: inherit;
+}
+
 /* 
   grey: #D1D1D1
   red: #EB5353

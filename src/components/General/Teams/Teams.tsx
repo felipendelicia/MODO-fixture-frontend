@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 
 import "./Teams.css"
 
@@ -9,12 +10,15 @@ const Teams = () => {
     <div className="teams-team-container">
       {
         teams.map((team, index)=>{
+          let teamNameRoute = team.name.replaceAll(" ", "")
           return(
             <div className="general-teams-container">
-              <div className="team-name-shield">
-                <img src="./assets/img/favicon.png" alt="shield" className="team-shield-img"/>
-                <p className="team-name">{team.name}</p>
-              </div>
+              <Link to={"/team/" + teamNameRoute}>
+                <div className="team-name-shield">
+                  <img src="./assets/img/favicon.png" alt="shield" className="team-shield-img"/>
+                  <p className="team-name">{team.name}</p>
+                </div>
+              </Link>
               <div className="team-stats">
                 <div className="team-wins-stat">
                   {team.wins}
