@@ -1,0 +1,10 @@
+.fixture-players-container{
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+}
+
+.teams-container{
+    display: flex;
+    justify-content: center;
+}
