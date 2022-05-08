@@ -1,9 +1,39 @@
 import React from 'react'
 
+import "./Teams.css"
+
+import {teams} from "../../../data/teams"
+
 const Teams = () => {
   return (
-    <div>
-        Teams
+    <div className="teams-team-container">
+      {
+        teams.map((team, index)=>{
+          return(
+            <div className="general-teams-container">
+              <div className="team-name-shield">
+                <img src="./assets/img/favicon.png" alt="shield" className="team-shield-img"/>
+                <p className="team-name">{team.name}</p>
+              </div>
+              <div className="team-stats">
+                <div className="team-wins-stat">
+                  {team.wins}
+                </div>
+                <div className="team-draws-stat">
+                  {team.draws}
+                </div>
+                <div className="team-defeats-stat">
+                  {team.defeats}
+                </div>
+                <div className="team-points">
+                  {"points: " + team.points}
+                </div>
+              </div>
+            </div>
+          )
+        })
+        
+      }
     </div>
   )
 }
