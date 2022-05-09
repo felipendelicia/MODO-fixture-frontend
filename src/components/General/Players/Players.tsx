@@ -15,7 +15,7 @@ const Players = () => {
             players.map((player, index)=>{
               return(
                 <div className="player-container" key={index}>
-                  
+                  {player.name}
                 </div>
               )
             })
