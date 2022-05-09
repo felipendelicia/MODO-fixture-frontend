@@ -50,5 +50,5 @@ export const matches = [
         date: '2022-05-06',
         time: '20:00',
         done: false
-    },
+    }
 ]

@@ -12,7 +12,7 @@ const Teams = () => {
         teams.map((team, index)=>{
           let teamNameRoute = team.name.replaceAll(" ", "")
           return(
-            <div className="general-teams-container">
+            <div className="general-teams-container" key={index}>
               <Link to={"/team/" + teamNameRoute}>
                 <div className="team-name-shield">
                   <img src="./assets/img/favicon.png" alt="shield" className="team-shield-img"/>
