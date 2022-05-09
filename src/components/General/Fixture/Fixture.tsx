@@ -14,9 +14,7 @@ const Fixture = () => {
 
   return (
     <div className="fixture-container">
-        {
-
-        }
+        Hola
     </div>
   )
 }
