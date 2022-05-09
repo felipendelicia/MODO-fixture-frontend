@@ -1,7 +1,38 @@
+.players-container-main{
+}
 .players-container{
     background-color: #D1D1D1;
-    border-radius: 10px;
+    border-radius: 8px;
     width: 30vw;
     max-height: 50vh;
-    overflow-y:auto
+    overflow-y:auto;
+    padding-bottom: 2em;
+}
+.player-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2em;
+}
+.player-photo-name{
+    margin-left: 0.6em;
+    display: flex;
+    align-items: center;
+}
+.player-photo{
+    width: 3.4em;
+    margin-right: 0.6em;
+}
+.player-name{
+    font-size: 1.2em;
+    font-family: Roboto-bold;
+}
+.player-goals-team{
+    display: flex;
+    align-items: center;
+}
+.player-goals-team p{
+    margin-right: 0.6em;
+    font-size: 1.3em;
+    font-family: Roboto-bold;
 }

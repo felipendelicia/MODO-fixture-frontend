@@ -9,6 +9,12 @@ a{
   color: inherit;
 }
 
+input{
+  background-color: inherit;
+  outline: none;
+  border: 0;
+}
+
 /* 
   grey: #D1D1D1
   red: #EB5353
@@ -18,7 +24,7 @@ a{
 
 /* Scroll bar style */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   border-radius: 10px;
