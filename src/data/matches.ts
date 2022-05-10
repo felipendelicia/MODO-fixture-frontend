@@ -49,7 +49,7 @@ export const matches = [
         visitorScorePenalties: 0,
         date: '2022-05-06',
         time: '20:00',
-        done: false
+        done: true
     },
     {
         id: '5',
@@ -155,4 +155,4 @@ export const matches = [
         time: '20:00',
         done: false
     },
-]
+].reverse()

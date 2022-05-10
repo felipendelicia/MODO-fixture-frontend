@@ -30,7 +30,7 @@ const Teams = () => {
                   {team.defeats}
                 </div>
                 <div className="team-points">
-                  {"points: " + team.points}
+                  {"puntos: " + team.points}
                 </div>
               </div>
             </div>

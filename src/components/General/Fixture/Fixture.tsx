@@ -1,19 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import "./Fixture.css"
-import moment from "moment"
 
 import { teams } from "../../../data/teams"
 import { matches } from "../../../data/matches"
 
 const Fixture = () => {
-
-  const [matchesList, setMatchesList] = useState(matches)
-
-  useEffect(()=>{ //Ordering the matches for date
-    let matchesSortedDate = matches.sort((a, b) => moment(b.date, "YYYY-MM-DD").unix() - moment(a.date, "YYYY-MM-DD").unix());
-    setMatchesList(matchesSortedDate)
-  },[])
 
   const currentTeam = (currentId:string) =>{
     for(let i = 0;i<teams.length;i++){
@@ -26,7 +18,7 @@ const Fixture = () => {
   return (
     <div className="fixture-container">
       {
-        matchesList.map((match, index)=>{
+        matches.map((match, index)=>{
           let currentLocalTeam = currentTeam(match.localId)
           let currentVisitorTeam = currentTeam(match.visitorId)
 
@@ -48,8 +40,8 @@ const Fixture = () => {
                 </div>
               </div>
               <div className="fixture-match-date">
-                <p>{match.date}</p>
-                <p>{match.time}</p>
+                <p className="match-date">{match.date}</p>
+                <p className="match-time">{match.time}</p>
               </div>
             </div>
           )

@@ -25,7 +25,11 @@ const Players = () => {
   const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
     const value = e.currentTarget.value
     setSearch(value)
-    filterPlayers(search)
+    if(value===""){
+      setPlayerList(players)
+    } else {
+      filterPlayers(search)
+    }
   }
 
   const filterPlayers = (search:string) => {

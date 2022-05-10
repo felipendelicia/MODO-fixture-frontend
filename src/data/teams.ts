@@ -48,8 +48,8 @@ export const teams = [
         id: '6',
         name: 'ASAP',
         player_ids: ['35','36','37','38','39','40','41','42'],
-        points: 0,
-        wins: 0,
+        points: 3,
+        wins: 1,
         draws: 0,
         defeats: 0
     },
@@ -57,17 +57,17 @@ export const teams = [
         id: '7',
         name: 'JJCE',
         player_ids: ['43','44','45','46','47','48','49','50'],
-        points: 0,
+        points: 1,
         wins: 0,
-        draws: 0,
+        draws: 1,
         defeats: 0
     },
     {
         id: '8',
         name: 'Verdolagas',
         player_ids: ['51','52','53','54','55','56','57','58','59'],
-        points: 0,
-        wins: 0,
+        points: 3,
+        wins: 1,
         draws: 0,
         defeats: 0
     }
