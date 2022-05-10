@@ -1,6 +1,5 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import {teams} from "./data/teams"
-import Scorers from "./components/Scorers/Scorers";
 import Team from "./components/Team/Team";
 import General from "./components/General/General";
 
@@ -10,7 +9,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<General/>}/>
-          <Route path="/scorers" element={<Scorers/>}/>
           {
             teams.map((teams,index)=>{
               let teamNameRoute = teams.name.replaceAll(" ", "")
