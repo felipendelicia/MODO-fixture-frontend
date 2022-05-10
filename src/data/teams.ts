@@ -1,8 +1,8 @@
 export const teams = [
     {
         id: '1',
-        name: 'La Nanoneta Mecanica',
-        player_ids: ['1', '2', '3', '4', '5', '6', '7'],
+        name: 'La Nanoneta Mecánica',
+        player_ids: ['9','10','11','12','13','14','15','16','17','18'],
         points: 0,
         wins: 0,
         draws: 0,
@@ -11,7 +11,7 @@ export const teams = [
     {
         id: '2',
         name: 'TBD',
-        player_ids: ['8', '9', '10', '11', '12', '13', '14'],
+        player_ids: ['19','20','21','22','23','24','25','26','27'],
         points: 0,
         wins: 0,
         draws: 0,
@@ -20,7 +20,7 @@ export const teams = [
     {
         id: '3',
         name: 'ChudeMun',
-        player_ids: ['15', '16', '17', '18', '19', '20', '21'],
+        player_ids: ['28','29','30','31','32','33','34'],
         points: 0,
         wins: 0,
         draws: 0,
@@ -29,7 +29,7 @@ export const teams = [
     {
         id: '4',
         name: 'Real MODrid',
-        player_ids: [], // TODO: Completar esta info
+        player_ids: ['60','61','62','63','64','65','66'],
         points: 3,
         wins: 1,
         draws: 0,
@@ -38,7 +38,7 @@ export const teams = [
     {
         id: '5',
         name: 'El Bicho',
-        player_ids: ['22', '23', '24', '25', '26', '27', '28'],
+        player_ids: ['1','2','3','4','5','6','7','8'],
         points: 1,
         wins: 0,
         draws: 1,
@@ -47,7 +47,7 @@ export const teams = [
     {
         id: '6',
         name: 'ASAP',
-        player_ids: ['29', '30', '31', '32', '33', '34', '35', '36'],
+        player_ids: ['35','36','37','38','39','40','41','42'],
         points: 0,
         wins: 0,
         draws: 0,
@@ -56,7 +56,7 @@ export const teams = [
     {
         id: '7',
         name: 'JJCE',
-        player_ids: ['37', '38', '39', '40', '41', '42', '43', '44'],
+        player_ids: ['43','44','45','46','47','48','49','50'],
         points: 0,
         wins: 0,
         draws: 0,
@@ -65,7 +65,7 @@ export const teams = [
     {
         id: '8',
         name: 'Verdolagas',
-        player_ids: ['45', '46', '47', '48', '49', '50', '51', '52'],
+        player_ids: ['51','52','53','54','55','56','57','58','59'],
         points: 0,
         wins: 0,
         draws: 0,
