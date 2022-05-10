@@ -5,6 +5,8 @@ import "./Fixture.css"
 import { teams } from "../../../data/teams"
 import { matches } from "../../../data/matches"
 
+import MatchModal from './MatchModal/MatchModal'
+
 const Fixture = () => {
 
   const currentTeam = (currentId:string) =>{
@@ -42,6 +44,9 @@ const Fixture = () => {
               <div className="fixture-match-date">
                 <p className="match-date">{match.date}</p>
                 <p className="match-time">{match.time}</p>
+              </div>
+              <div>
+                <MatchModal matchId={match.id}/>
               </div>
             </div>
           )
