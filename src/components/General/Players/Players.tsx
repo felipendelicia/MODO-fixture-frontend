@@ -40,7 +40,7 @@ const Players = () => {
               return(
                 <div className="player-container" key={index}>
                   <div className="player-photo-name">
-                    <img src="./assets/img/people.png" alt="playerPic" className="player-photo"/>
+                    <img src={player.picUrl} alt="playerPic" className="player-photo"/>
                     <p className="player-name">{player.name}</p>
                   </div>
                   <div className="player-goals-team">

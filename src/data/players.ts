@@ -1,4 +1,4 @@
-export const players = JSON.parse(`[
+export const players = [
     {
         "id": "1",
         "name": "Luqui",
@@ -535,4 +535,4 @@ export const players = JSON.parse(`[
         "isCaptain": false,
         "teamId": "2"
     }
-]`)
+]
