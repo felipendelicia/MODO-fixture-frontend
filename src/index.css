@@ -16,13 +16,6 @@ input{
   border: 0;
 }
 
-/* 
-  grey: #D1D1D1
-  red: #EB5353
-  green: #36AE7C
-  yellow: #FFE400
-*/
-
 /* Scroll bar style */
 ::-webkit-scrollbar {
   width: 8px;

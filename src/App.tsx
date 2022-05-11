@@ -1,24 +1,17 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom"
-import {teams} from "./data/teams"
-import Team from "./components/Team/Team";
-import General from "./components/General/General";
+import Carrousel from "./components/Carrousel/Carrousel";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<General/>}/>
-          {
-            teams.map((teams,index)=>{
-              let teamNameRoute = teams.name.replaceAll(" ", "")
-              return(
-                <Route path={"/team/" + teamNameRoute} element={<Team/>} key={index}/>
-              )
-            })
-          }
-        </Routes>
-      </BrowserRouter>
+      <div className="header">
+        <h1>Torneo de fútbol</h1>
+        <img src="https://merchants.modo.com.ar/img/home/modo-logo.svg" alt="modo logo"/>
+      </div>
+      <div className="container">
+        <Carrousel/>
+        {/* <Fixture/>
+        <BestScorers/> */}
+      </div>
     </div>
   );
 }
