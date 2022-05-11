@@ -30,9 +30,6 @@ const Carrousel = () => {
 
   return (
     <div>
-        {
-          <p>ad</p>
-        }
     </div>
   )
 }

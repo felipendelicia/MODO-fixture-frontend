@@ -1,5 +1,7 @@
 import "./App.css"
 
+import BestScorers from "./components/BestScorers/BestScorers";
+
 function App() {
   return (
     <div className="App">
@@ -8,9 +10,7 @@ function App() {
         <h1>Torneo de fútbol</h1>
       </div>
       <div className="container">
-        {/* <Carrousel/>
-        <Fixture/>
-        <BestScorers/> */}
+        <BestScorers/>
       </div>
     </div>
   );
