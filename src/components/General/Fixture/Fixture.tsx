@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactEventHandler } from 'react'
 
 import "./Fixture.css"
 
@@ -17,6 +17,11 @@ const Fixture = () => {
     }
   }
 
+  const openModal = (currentTarget:HTMLElement) => {
+    let currentModal = currentTarget.parentElement?.parentElement?.lastElementChild
+    console.log(currentModal?.classList.add("show"))
+  }
+
   return (
     <div className="fixture-container">
       {
@@ -33,7 +38,7 @@ const Fixture = () => {
                 </div>
                 {
                   match.done
-                  ? <p>{match.localScore + " a " + match.visitorScore}</p> 
+                  ? <p className="parraf-score" onClick={(e)=>openModal(e.currentTarget)}>{match.localScore + " - " + match.visitorScore}</p> 
                   : <p>vs</p> 
                 }
                 <div className="fixture-match-shield-name">
@@ -45,7 +50,7 @@ const Fixture = () => {
                 <p className="match-date">{match.date}</p>
                 <p className="match-time">{match.time}</p>
               </div>
-              <div>
+              <div className="fixture-match-modal">
                 <MatchModal matchId={match.id}/>
               </div>
             </div>

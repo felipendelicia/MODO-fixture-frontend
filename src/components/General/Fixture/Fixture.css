@@ -40,3 +40,18 @@
     width: 3em;
     margin-bottom: 0.3em;
 }
+
+.fixture-match-modal{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.parraf-score{
+    background-color: #D1D1D1;
+    padding: 0.5em 1em;
+    font-family: Roboto-bold;
+    cursor: pointer;
+}

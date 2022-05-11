@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto-regular";
+  transition: all 0.4 ease;
 }
 
 a{
