@@ -1,15 +1,15 @@
-import Carrousel from "./components/Carrousel/Carrousel";
+import "./App.css"
 
 function App() {
   return (
     <div className="App">
       <div className="header">
+        <img src="./assets/img/modo-logo.svg" alt="modo logo"/>
         <h1>Torneo de fútbol</h1>
-        <img src="https://merchants.modo.com.ar/img/home/modo-logo.svg" alt="modo logo"/>
       </div>
       <div className="container">
-        <Carrousel/>
-        {/* <Fixture/>
+        {/* <Carrousel/>
+        <Fixture/>
         <BestScorers/> */}
       </div>
     </div>

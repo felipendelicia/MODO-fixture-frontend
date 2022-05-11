@@ -5,16 +5,30 @@
     font-weight: normal;
   }
   
-  @font-face {
+@font-face {
     font-family: "Roboto-light";
     src: url("../public/assets/fonts/Roboto-Light.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
   }
   
-  @font-face {
+@font-face {
     font-family: "Roboto-bold";
     src: url("../public/assets/fonts/Roboto-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+
+@font-face {
+    font-family: "Zeppelin33";
+    src: url("../public/assets/fonts/Zeppelin33.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: "FoundrySterling";
+    src: url("../public/assets/fonts/FoundrySterling-Light.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
   }

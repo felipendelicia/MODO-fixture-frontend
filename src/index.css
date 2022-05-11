@@ -1,7 +1,6 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: "Roboto-regular";
   transition: all 0.4 ease;
 }
 
@@ -30,3 +29,13 @@ input{
 ::-webkit-scrollbar-thumb:hover {
   background: #8b8b8b; 
 }
+
+/* 
+
+black : #1c1e21 
+green : #25c2a0
+blue  : #008ae0
+grey  : #4d4d4d
+
+
+*/
