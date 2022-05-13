@@ -1,7 +1,13 @@
 .fixture-container{
+    display: flex;
     margin-top: 2em;
     margin-bottom: 2em;
 }
+
+.fixture-group-container{
+    margin: 1em;
+}
+
 .group-title{
     font-family: Roboto-light;
     color: #25c2a0;
