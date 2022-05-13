@@ -54,4 +54,29 @@
     border-radius: 5px;
     font-family: Roboto-regular;
     color: #fff;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+.carrousel-controls div:hover{
+    background-color: #1ea88a;
+}
+
+@media (max-width: 1200px){
+    .carrousel-date-time p{
+        font-size: 1.8em;
+    }
+    .carrousel-shield-and-name p{
+        margin: 0 1em;
+    }
+    .carrousel-controls div{
+        padding: 0.4em 1.2em;
+        font-size: 1.8em;
+    }
+    .carrousel-shields-scores p{
+        font-size: 2em;
+    }
+    .carrousel-container{
+        margin: 3em 5em;
+    }
 }

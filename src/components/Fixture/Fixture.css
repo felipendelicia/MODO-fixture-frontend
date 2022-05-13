@@ -35,3 +35,12 @@ td{
     background-color: #008ae0;
     color: #fff;
 }
+
+@media (max-width: 1200px){
+    .fixture-container{
+        display: block;
+    }
+    td{
+        font-size: 1.3em;
+    }
+}

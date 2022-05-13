@@ -1,6 +1,6 @@
 .bestscorers-container{
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    margin: 2em 20em;
+    margin: 2em 18em;
     padding: 0.5em 1em;
 }
 
@@ -50,4 +50,19 @@
 
 .bestscorer-3-name{
     color: #724716;
+}
+
+@media (max-width: 1200px){
+    .bestscorers-container{
+        margin: 4em 14em;
+    }
+    .pic-bestscorer-name img{
+        width: 8em;
+    }
+    .bestscorers-container h3{
+        font-size: 2.7em;
+    }
+    .bestscorer-container p{
+        font-size: 2.4em
+    }
 }
