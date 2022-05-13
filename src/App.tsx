@@ -2,6 +2,7 @@ import "./App.css"
 
 import BestScorers from "./components/BestScorers/BestScorers";
 import Carrousel from "./components/Carrousel/Carrousel";
+import Fixture from "./components/Fixture/Fixture";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       </div>
       <div className="container">
         <Carrousel/>
+        <Fixture/>
+        <BestScorers/>
       </div>
     </div>
   );

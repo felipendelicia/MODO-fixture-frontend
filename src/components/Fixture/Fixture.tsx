@@ -4,6 +4,7 @@ import {matches} from "../../data/matches"
 import {teams} from "../../data/teams"
 import {goals} from "../../data/goals"
 
+import "./Fixture.css"
 
 const Fixture = () => {
 
@@ -38,10 +39,10 @@ const Fixture = () => {
   useEffect(()=>{console.log(teamsList)},[teamsList])
 
   return (
-  <div>
-    <h1>Grupo A</h1>
-    <table>
-            <tr>
+  <div className="fixture-container">
+    <h1 className="group-title">Grupo A</h1>
+    <table className="table-container">
+            <tr className="table-categories">
               <td>Equipo</td>
               <td>PJ</td>
               <td>PG</td>
@@ -56,7 +57,7 @@ const Fixture = () => {
               if(team.group === "a"){
                 return(
                   <tr>
-                    <td>{team.name}</td>
+                    <td className="table-team-names">{team.name}</td>
                     <td>{team.playedMatches}</td>
                     <td>{team.wins}</td>
                     <td>{team.draws}</td>
@@ -70,9 +71,9 @@ const Fixture = () => {
               }   
             })}
     </table>
-    <h1>Grupo B</h1>
-    <table>
-            <tr>
+    <h1 className="group-title">Grupo B</h1>
+    <table className="table-container">
+            <tr className="table-categories">
               <td>Equipo</td>
               <td>PJ</td>
               <td>PG</td>
@@ -87,7 +88,7 @@ const Fixture = () => {
               if(team.group === "b"){
                 return(
                   <tr>
-                    <td>{team.name}</td>
+                    <td className="table-team-names">{team.name}</td>
                     <td>{team.playedMatches}</td>
                     <td>{team.wins}</td>
                     <td>{team.draws}</td>

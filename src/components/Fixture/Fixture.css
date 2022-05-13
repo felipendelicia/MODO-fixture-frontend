@@ -1,0 +1,31 @@
+.fixture-container{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.group-title{
+    font-family: Roboto-light;
+    color: #25c2a0;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom:0.5em; 
+}
+
+.table-container{
+    margin: 0 auto;
+}
+
+td{
+    padding: 0.8em;
+    font-family: Roboto-regular;
+}
+
+.table-categories{
+    background-color: #25c2a0;
+    color: #fff;
+}
+
+.table-team-names {
+    background-color: #008ae0;
+    color: #fff;
+}
