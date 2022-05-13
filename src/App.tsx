@@ -1,6 +1,7 @@
 import "./App.css"
 
 import BestScorers from "./components/BestScorers/BestScorers";
+import Carrousel from "./components/Carrousel/Carrousel";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <h1>Torneo de fútbol</h1>
       </div>
       <div className="container">
-        <BestScorers/>
+        <Carrousel/>
       </div>
     </div>
   );

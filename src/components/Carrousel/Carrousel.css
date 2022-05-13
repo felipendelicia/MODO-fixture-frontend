@@ -1,0 +1,57 @@
+.carrousel-container{
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    margin: 2em 10em;
+    padding: 1em 2em;
+}
+
+.carrousel-shield-and-name{
+    display: flex;
+    align-items: center;
+}
+
+.carrousel-shields-scores{
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 1em;
+}
+
+.carrousel-date-time p{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-items: center;
+    font-family: Roboto-regular;
+    color: #1c1e21;
+}
+
+.carrousel-shield-and-name img{
+    width: 4em;
+}
+
+.carrousel-shield-and-name p{
+    margin: 0 1em;
+    font-family: Roboto-bold;
+    font-size: 1.2em;
+    color: #25c2a0;
+}
+
+.carrousel-shields-scores p{
+    font-family: Roboto-regular;
+    font-size: 1.1em;
+}
+
+.carrousel-controls{
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrousel-controls div{
+    display: inline;
+    background-color: #25c2a0;
+    padding: 0.2em 0.6em;
+    border-radius: 5px;
+    font-family: Roboto-regular;
+    color: #fff;
+}
