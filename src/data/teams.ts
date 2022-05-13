@@ -6,7 +6,8 @@ export const teams = [
         points: 0,
         wins: 0,
         draws: 0,
-        defeats: 1
+        defeats: 1,
+        group:"a"
     },
     {
         id: '2',
@@ -15,7 +16,8 @@ export const teams = [
         points: 0,
         wins: 0,
         draws: 0,
-        defeats: 1
+        defeats: 1,
+        group:"a"
     },
     {
         id: '3',
@@ -24,7 +26,8 @@ export const teams = [
         points: 0,
         wins: 0,
         draws: 0,
-        defeats: 0
+        defeats: 0,
+        group:"b"
     },
     {
         id: '4',
@@ -33,7 +36,8 @@ export const teams = [
         points: 3,
         wins: 1,
         draws: 0,
-        defeats: 0
+        defeats: 0,
+        group:"a"
     },
     {
         id: '5',
@@ -42,7 +46,8 @@ export const teams = [
         points: 1,
         wins: 0,
         draws: 1,
-        defeats: 0
+        defeats: 0,
+        group:"b"
     },
     {
         id: '6',
@@ -51,7 +56,8 @@ export const teams = [
         points: 3,
         wins: 1,
         draws: 0,
-        defeats: 0
+        defeats: 0,
+        group:"a"
     },
     {
         id: '7',
@@ -60,7 +66,8 @@ export const teams = [
         points: 1,
         wins: 0,
         draws: 1,
-        defeats: 0
+        defeats: 0,
+        group:"b"
     },
     {
         id: '8',
@@ -69,6 +76,7 @@ export const teams = [
         points: 3,
         wins: 1,
         draws: 0,
-        defeats: 0
+        defeats: 0,
+        group:"b"
     }
 ]

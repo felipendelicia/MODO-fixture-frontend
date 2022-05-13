@@ -1,0 +1,19 @@
+.bestscorers-container{
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    margin: 2em 0;
+}
+
+.bestscorers-container h3{
+    font-family: Roboto-regular;
+    color: #25c2a0;
+    font-size: 2em;
+}
+
+.pic-bestscorer-name{
+    border-radius: 9999999px;
+    width: 8em;
+}
+
+.bestscorer-container{
+    display: flex;
+}

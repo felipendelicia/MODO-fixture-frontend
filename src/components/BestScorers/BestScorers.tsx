@@ -8,7 +8,7 @@ import {teams} from "../../data/teams"
 
 const BestScorers = () => {
 
-    const [playersList, setPlayersList] = useState([])
+    const [playersList, setPlayersList] = useState<unknown>([])
 
     useEffect(()=>{
         const allPlayers = players.map((player)=>{
@@ -29,10 +29,35 @@ const BestScorers = () => {
 
     },[])
 
-
   return (
     <div className="bestscorers-container">
+        <h3>Goleadores</h3>
 
+        <div className="bestscorer-container">
+            <div className="pic-bestscorer-name">
+                <img src="" alt="player"/>
+                <p className="bestscorer-1-name"></p>
+            </div>
+            <p className="bestscorer-goals"></p>
+        </div>
+
+        <div className="bestscorer-container">
+            <div className="pic-bestscorer-name">
+                <img src="" alt="player"/>
+                <p className="bestscorer-2-name"></p>
+            </div>
+            <p className="bestscorer-goals"></p>
+        </div>
+
+        <div className="bestscorer-container">
+            <div className="pic-bestscorer-name">
+                <img src="" alt="player"/>
+                <p className="bestscorer-3-name"></p>
+            </div>
+            <p className="bestscorer-goals"></p>
+        </div>
+
+        <p>Ver todos</p>
     </div>
   )
 }

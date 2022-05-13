@@ -5,7 +5,7 @@ import {teams} from "../../data/teams"
 
 const Carrousel = () => {
 
-    const [matchesList, setMatchesList] = useState([])
+    const [matchesList, setMatchesList] = useState<unknown>([])
     //const [currentMatch, setCurrentMatch] = useState({})
 
     useEffect(()=>{
@@ -24,9 +24,8 @@ const Carrousel = () => {
                 done: match.done
             })
         })
+        setMatchesList(currentMatches)
     },[])
-
-    
 
   return (
     <div>
