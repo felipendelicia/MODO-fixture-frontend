@@ -18,7 +18,7 @@ const Fixture = () => {
           points:team.points,
           wins:team.wins,
           defeats:team.defeats,
-          draw:team.draws,
+          draws:team.draws,
           group:team.group,
           playedMatches: matches.filter((match)=>{
             return match.done===true && (match.localId === team.id || match.visitorId === team.id)
