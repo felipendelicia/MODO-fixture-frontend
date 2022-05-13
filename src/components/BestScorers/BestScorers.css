@@ -1,0 +1,68 @@
+.bestscorers-container{
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    margin: 2em 18em;
+    padding: 0.5em 1em;
+}
+
+.bestscorers-container h3{
+    font-family: Roboto-light;
+    color: #25c2a0;
+    font-size: 2em;
+    padding: 0.5em 1em;
+}
+
+.pic-bestscorer-name img{
+    border-radius: 9999999px;
+    width: 6em;
+    margin-right: 1em;
+}
+
+.bestscorer-container{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: center;
+    margin: 1em 0.2em;
+    
+}
+
+.pic-bestscorer-name{
+    display: flex;
+    align-items: center;
+}
+
+.bestscorers-container p{
+    display: flex;
+    justify-content: center;
+}
+
+.bestscorer-container p{
+    font-family: Roboto-light;
+    font-size: 1.7em
+}
+
+.bestscorer-1-name{
+    color: #a79f33;
+}
+
+.bestscorer-2-name{
+    color: #6d6d68;
+}
+
+.bestscorer-3-name{
+    color: #724716;
+}
+
+@media (max-width: 1200px){
+    .bestscorers-container{
+        margin: 4em 14em;
+    }
+    .pic-bestscorer-name img{
+        width: 8em;
+    }
+    .bestscorers-container h3{
+        font-size: 2.7em;
+    }
+    .bestscorer-container p{
+        font-size: 2.4em
+    }
+}

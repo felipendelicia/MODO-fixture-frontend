@@ -6,7 +6,8 @@ export const teams = [
         points: 0,
         wins: 0,
         draws: 0,
-        defeats: 1
+        defeats: 1,
+        group:"a"
     },
     {
         id: '2',
@@ -15,7 +16,8 @@ export const teams = [
         points: 0,
         wins: 0,
         draws: 0,
-        defeats: 1
+        defeats: 1,
+        group:"a"
     },
     {
         id: '3',
@@ -24,7 +26,8 @@ export const teams = [
         points: 0,
         wins: 0,
         draws: 0,
-        defeats: 0
+        defeats: 0,
+        group:"b"
     },
     {
         id: '4',
@@ -33,7 +36,8 @@ export const teams = [
         points: 3,
         wins: 1,
         draws: 0,
-        defeats: 0
+        defeats: 0,
+        group:"a"
     },
     {
         id: '5',
@@ -42,33 +46,37 @@ export const teams = [
         points: 1,
         wins: 0,
         draws: 1,
-        defeats: 0
+        defeats: 0,
+        group:"b"
     },
     {
         id: '6',
         name: 'ASAP',
         player_ids: ['35','36','37','38','39','40','41','42'],
-        points: 0,
-        wins: 0,
+        points: 3,
+        wins: 1,
         draws: 0,
-        defeats: 0
+        defeats: 0,
+        group:"a"
     },
     {
         id: '7',
         name: 'JJCE',
         player_ids: ['43','44','45','46','47','48','49','50'],
-        points: 0,
+        points: 1,
         wins: 0,
-        draws: 0,
-        defeats: 0
+        draws: 1,
+        defeats: 0,
+        group:"b"
     },
     {
         id: '8',
         name: 'Verdolagas',
         player_ids: ['51','52','53','54','55','56','57','58','59'],
-        points: 0,
-        wins: 0,
+        points: 3,
+        wins: 1,
         draws: 0,
-        defeats: 0
+        defeats: 0,
+        group:"b"
     }
 ]

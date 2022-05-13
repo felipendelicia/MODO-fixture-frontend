@@ -11,7 +11,7 @@ export const matches = [
         date: '2022-04-29',
         time: '19:00',
         done: true,
-        urlVideo: 'https://beelup.com/player.php?id=2627790',
+        urlVideo: 'https://beelup.com/player.php?id=2627790'
     },
     {
         id: '2',
@@ -25,7 +25,7 @@ export const matches = [
         date: '2022-04-29',
         time: '20:00',
         done: true,
-        urlVideo: 'https://beelup.com/player.php?id=2627808',
+        urlVideo: 'https://beelup.com/player.php?id=2627808'
     },
     {
         id: '3',
@@ -39,11 +39,11 @@ export const matches = [
         date: '2022-05-06',
         time: '19:00',
         done: true,
-        urlVideo: 'https://beelup.com/player.php?id=2699061',
+        urlVideo: 'https://beelup.com/player.php?id=2699061'
     },
     {
         id: '4',
-        localId: '2',
+        localId: '3',
         visitorId: '8',
         localScore: 5,
         visitorScore: 9,
@@ -52,7 +52,7 @@ export const matches = [
         visitorScorePenalties: 0,
         date: '2022-05-06',
         time: '20:00',
-        done: false
+        done: true
     },
     {
         id: '5',
