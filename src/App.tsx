@@ -1,6 +1,6 @@
 import "./App.css"
 
-import Fixture from "./components/Fixture/Fixture";
+import BestScorers from "./components/BestScorers/BestScorers";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <h1>Torneo de fútbol</h1>
       </div>
       <div className="container">
-        <Fixture/>
+        <BestScorers/>
       </div>
     </div>
   );

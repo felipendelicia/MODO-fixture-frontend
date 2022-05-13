@@ -1,19 +1,52 @@
 .bestscorers-container{
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    margin: 2em 0;
+    margin: 2em 20em;
 }
 
 .bestscorers-container h3{
     font-family: Roboto-regular;
     color: #25c2a0;
     font-size: 2em;
+    padding: 0.5em 1em;
 }
 
-.pic-bestscorer-name{
+.pic-bestscorer-name img{
     border-radius: 9999999px;
-    width: 8em;
+    width: 6em;
+    margin-right: 1em;
 }
 
 .bestscorer-container{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: center;
+    margin: 1em 0.2em;
+    
+}
+
+.pic-bestscorer-name{
     display: flex;
+    align-items: center;
+}
+
+.bestscorers-container p{
+    display: flex;
+    justify-content: center;
+}
+
+.bestscorer-container p{
+    font-family: "FoundrySterling";
+    font-size: 1.7em
+}
+
+.bestscorer-1-name{
+    color: #a79f33;
+}
+
+.bestscorer-2-name{
+    color: #6d6d68;
+}
+
+.bestscorer-3-name{
+    color: #724716;
 }
