@@ -32,7 +32,28 @@ const Fixture = () => {
       })
     })
 
-    currentTeams = currentTeams.sort((team: any) => -team.points)
+    currentTeams.sort((a: any, b: any) => {
+      if (a.points > b.points) {
+        return -1
+      } else if (a.points < b.points) {
+        return 1
+      } else {
+        const dgA = a.gf - a.gc;
+        const dgB = b.gf - b.gc;
+        if (dgA > dgB) {
+          return -1
+        } else if (dgA < dgB) {
+          return 1
+        } else {
+          if (a.gf > b.gf) {
+            return -1
+          } else {
+            return 1
+          }
+        }
+      }
+    });
+
     setTeamsList(currentTeams)
   }, [])
 
