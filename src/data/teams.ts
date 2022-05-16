@@ -6,15 +6,15 @@ export const teams = [
         points: 0,
         wins: 0,
         draws: 0,
-        defeats: 1,
+        defeats: 2,
         group:"a"
     },
     {
         id: '2',
         name: 'TBD',
         player_ids: ['19','20','21','22','23','24','25','26','27'],
-        points: 0,
-        wins: 0,
+        points: 3,
+        wins: 1,
         draws: 0,
         defeats: 1,
         group:"a"
@@ -26,7 +26,7 @@ export const teams = [
         points: 0,
         wins: 0,
         draws: 0,
-        defeats: 0,
+        defeats: 1,
         group:"b"
     },
     {
@@ -46,7 +46,7 @@ export const teams = [
         points: 1,
         wins: 0,
         draws: 1,
-        defeats: 0,
+        defeats: 1,
         group:"b"
     },
     {
@@ -73,8 +73,8 @@ export const teams = [
         id: '8',
         name: 'Verdolagas',
         player_ids: ['51','52','53','54','55','56','57','58','59'],
-        points: 3,
-        wins: 1,
+        points: 6,
+        wins: 2,
         draws: 0,
         defeats: 0,
         group:"b"
