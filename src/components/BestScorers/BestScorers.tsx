@@ -35,15 +35,18 @@ const BestScorers = () => {
 
         <div className="bestscorer-container">
             <div className="pic-bestscorer-name">
-                <img src={playersList[0]?.picUrl} alt="player"/>
+                <img className="pic-bestscorer-gold" src={playersList[0]?.picUrl} alt="player"/>
                 <p className="bestscorer-1-name">{playersList[0]?.name}</p>
+                <div className="golden-boot-container">
+                        <img className="golden-boot" src='./assets/img/botin_oro.png' alt="golden"/>
+                </div>
             </div>
             <p className="bestscorer-goals">{playersList[0]?.playerGoals}</p>
         </div>
 
         <div className="bestscorer-container">
             <div className="pic-bestscorer-name">
-                <img src={playersList[1]?.picUrl} alt="player"/>
+                <img className="pic-bestscorer-silver" src={playersList[1]?.picUrl} alt="player"/>
                 <p className="bestscorer-2-name">{playersList[1]?.name}</p>
             </div>
             <p className="bestscorer-goals">{playersList[1]?.playerGoals}</p>
@@ -51,7 +54,7 @@ const BestScorers = () => {
 
         <div className="bestscorer-container">
             <div className="pic-bestscorer-name">
-                <img src={playersList[2]?.picUrl} alt="player"/>
+                <img className="pic-bestscorer-bronze" src={playersList[2]?.picUrl} alt="player"/>
                 <p className="bestscorer-3-name">{playersList[2]?.name}</p>
             </div>
             <p className="bestscorer-goals">{playersList[2]?.playerGoals}</p>
