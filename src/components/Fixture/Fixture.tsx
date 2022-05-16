@@ -88,7 +88,7 @@ const Fixture = () => {
                   <td>{team.gf - team.gc}</td>
                 </tr>
               )
-            }
+            } else {return(<></>)}
           })}
         </table>
       </div>
@@ -121,7 +121,7 @@ const Fixture = () => {
                   <td>{team.gf - team.gc}</td>
                 </tr>
               )
-            }
+            } else {return(<></>)}
           })}
         </table>
       </div>
