@@ -58,27 +58,27 @@ export const matches = [
         id: '5',
         localId: '2',
         visitorId: '1',
-        localScore: 0,
-        visitorScore: 0,
+        localScore: 4,
+        visitorScore: 1,
         isPlayoff: false,
         localScorePenalties: 0,
         visitorScorePenalties: 0,
         date: '2022-05-13',
         time: '19:00',
-        done: false
+        done: true
     },
     {
         id: '6',
         localId: '5',
         visitorId: '8',
-        localScore: 0,
-        visitorScore: 0,
+        localScore: 6,
+        visitorScore: 15,
         isPlayoff: false,
         localScorePenalties: 0,
         visitorScorePenalties: 0,
         date: '2022-05-13',
         time: '20:00',
-        done: false
+        done: true
     },
     {
         id: '7',
@@ -96,7 +96,7 @@ export const matches = [
     {
         id: '8',
         localId: '7',
-        visitorId: '2',
+        visitorId: '3',
         localScore: 0,
         visitorScore: 0,
         isPlayoff: false,
@@ -147,7 +147,7 @@ export const matches = [
     },
     {
         id: '12',
-        localId: '2',
+        localId: '3',
         visitorId: '5',
         localScore: 0,
         visitorScore: 0,

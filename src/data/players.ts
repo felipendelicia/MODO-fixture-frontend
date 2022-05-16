@@ -529,10 +529,36 @@ export const players = [
     },
     {
         "id": "67",
-        "name": "Diego", // TODO: Es Diego W?
+        "name": "Diego Wahnon",
         "number": "43",
-        "picUrl": "", // TODO: Agregar pic y en excel
+        "picUrl": "https://ca.slack-edge.com/T01062DGEET-U01ER3WKXT2-d39bd24752b6-512",
         "isCaptain": false,
-        "teamId": "2"
+        "teamId": "3"
+    },
+    {
+        "id": "68",
+        "name": "Dario Escarlon",
+        "number": "45",
+        "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03E2716ZME-f1a747396a89-512",
+        "isCaptain": false,
+        "teamId": "7"
+    },
+    {
+        "id": "69",
+        "name": "Martin Kuszczak",
+        "number": "45",
+        "picUrl": "https://ca.slack-edge.com/T01062DGEET-U02S6P942D7-00ea99b8363d-512",
+        "isCaptain": false,
+        "teamId": "8"
+    }
+    ,
+    {
+        "id": "70",
+        "name": "Marian Ledesma",
+        "number": "55",
+        "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03A3MQJ51P-00dbb37fdeca-512",
+        "isCaptain": false,
+        "teamId": "8"
     }
 ]
+	
