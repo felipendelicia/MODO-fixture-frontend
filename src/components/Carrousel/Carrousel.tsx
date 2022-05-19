@@ -70,7 +70,7 @@ const Carrousel = () => {
             <img src='./assets/img/favicon.png' alt="shield"/>
             <p>{currentMatch?.localName}</p>
           </div>
-          <p>{currentMatch?.done? currentMatch.localScore + " - "+ currentMatch.visitorScore:"vs"}</p>
+          <p className="score-match">{currentMatch?.done? currentMatch.localScore + " - "+ currentMatch.visitorScore:"vs"}</p>
           <div className="carrousel-shield-and-name">
             <p>{currentMatch?.visitorName}</p>
             <img src='./assets/img/favicon.png' alt="shield"/>
