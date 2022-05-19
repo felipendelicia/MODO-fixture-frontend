@@ -5,6 +5,30 @@ import {teams} from "../../data/teams"
 
 import "./Carrousel.css"
 
+const MONTHS_MAP: {[key: string]: string} = {
+  "01": "Enero",
+  "02": "Febrero",
+  "03": "Marzo",
+  "04": "Abril",
+  "05": "Mayo",
+  "06": "Junio",
+  "07": "Julio",
+  "08": "Agosto",
+  "09": "Septiembre",
+  "10": "Octubre",
+  "11": "Noviembre",
+  "12": "Diciembre",
+}
+
+const buildDate = (date: string): string => {
+  const dateArray = date.split("-");
+  const year = dateArray[0];
+  const month = dateArray[1];
+  const day = dateArray[2].startsWith("0")?dateArray[2].substring(1):dateArray[2];
+
+  return `${day} de ${MONTHS_MAP[month]} de ${year}`
+}
+
 const Carrousel = () => {
 
     const [matchesList, setMatchesList] = useState<{
@@ -33,7 +57,7 @@ const Carrousel = () => {
                 isPlayoff: match.isPlayoff,
                 localScorePenalties: match.localScorePenalties,
                 visitorScorePenalties: match.visitorScorePenalties,
-                date: match.date,
+                date: buildDate(match.date),
                 time: match.time,
                 done: match.done
             })
