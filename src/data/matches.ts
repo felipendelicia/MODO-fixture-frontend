@@ -108,8 +108,8 @@ export const matches = [
     },
     {
         id: '9',
-        localId: '1',
-        visitorId: '6',
+        localId: '8',
+        visitorId: '7',
         localScore: 0,
         visitorScore: 0,
         isPlayoff: false,
@@ -121,8 +121,8 @@ export const matches = [
     },
     {
         id: '10',
-        localId: '8',
-        visitorId: '7',
+        localId: '1',
+        visitorId: '6',
         localScore: 0,
         visitorScore: 0,
         isPlayoff: false,
