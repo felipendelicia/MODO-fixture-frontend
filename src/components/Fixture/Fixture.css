@@ -3,10 +3,15 @@
     margin: 3em 0;
     justify-content: center;
     width: 100%;
+    text-align: center;
 }
 
 .fixture-group-container:first-child{
     padding-right: 1em;
+}
+
+.fixture-group-container{
+    width: 100%;
 }
 
 .group-title{
@@ -20,11 +25,16 @@
 
 .table-container{
     margin: 0 auto;
+    width: 100%;
 }
 
 td{
     padding: 0.8em;
     font-family: Roboto-regular;
+}
+
+td:first-child{
+    text-align: left;
 }
 
 .table-categories{
@@ -55,6 +65,11 @@ td{
     border-left: red solid 10px;    
 }
 
+.td-points {
+        background-color: rgba(37, 194, 160, 0.4);
+        font-weight: bolder;
+}
+
 @media (max-width: 1200px){
     .fixture-container{
         display: block;
@@ -63,7 +78,7 @@ td{
         width: 100%;
     }
     td{
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
     tr{
         display: grid;

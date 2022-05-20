@@ -86,7 +86,7 @@ const Fixture = () => {
                   <td>{team.gf}</td>
                   <td>{team.gc}</td>
                   <td>{team.gf - team.gc}</td>
-                  <td>{team.points}</td>
+                  <td className="td-points">{team.points}</td>
                 </tr>
               )
           })}
@@ -118,7 +118,7 @@ const Fixture = () => {
                   <td>{team.gf}</td>
                   <td>{team.gc}</td>
                   <td>{team.gf - team.gc}</td>
-                  <td>{team.points}</td>
+                  <td className="td-points">{team.points}</td>
                 </tr>
               )
           })}

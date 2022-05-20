@@ -39,13 +39,8 @@
 .carrousel-shield-and-name p{
     margin: 0 1em;
     font-family: Roboto-bold;
-    font-size: 1.2em;
+    font-size: 2em;
     color: #25c2a0;
-}
-
-.carrousel-shields-scores p{
-    font-family: Roboto-regular;
-    font-size: 1.1em;
 }
 
 .carrousel-controls{
@@ -69,6 +64,8 @@
 }
 
 .score-match{
+    font-family: Roboto-regular;
+    font-size: 1.1em;
     white-space: nowrap;
 }
 
@@ -77,13 +74,14 @@
         font-size: 1.8em;
     }
     .carrousel-shield-and-name p{
+        font-size: 2.5em;
         margin: 0 1em;
     }
     .carrousel-controls div{
         padding: 0.4em 1.2em;
         font-size: 1.8em;
     }
-    .carrousel-shields-scores p{
+    .score-match{
         font-size: 2em;
     }
     .carrousel-container{
