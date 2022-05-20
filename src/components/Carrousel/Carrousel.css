@@ -1,6 +1,6 @@
 .carrousel-container{
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    margin: 3em 10em;
+    margin: 2em 0em;
     padding: 1em 2em;
 }
 
@@ -87,6 +87,6 @@
         font-size: 2em;
     }
     .carrousel-container{
-        margin: 3em 5em;
+        margin: 3em 0em;
     }
 }

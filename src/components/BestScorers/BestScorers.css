@@ -1,6 +1,6 @@
 .bestscorers-container{
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    margin: 2em 18em;
+    margin: 3em 0;
     padding: 0.5em 1em;
 }
 
@@ -85,7 +85,7 @@
 
 @media (max-width: 1200px){
     .bestscorers-container{
-        margin: 4em 14em;
+        margin: 4em 0em;
     }
     .pic-bestscorer-name img{
         width: 8em;
