@@ -47,6 +47,14 @@ td{
     padding: 0;
 }
 
+.classified {
+    border-left: rgb(33, 157, 33) solid 10px;
+}
+
+.unclassified {
+    border-left: red solid 10px;    
+}
+
 @media (max-width: 1200px){
     .fixture-container{
         display: block;

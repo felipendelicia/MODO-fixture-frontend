@@ -57,20 +57,24 @@
     max-width: 100%;
 }
 
-.pic-bestscorer-gold{
+.pic-bestscorer {
     border-radius: 50%;
-    border: 3px solid #d8cd2c;
+    border: 4px solid;
 }
 
-.pic-bestscorer-silver{
-    border-radius: 50%;
-    border: 3px solid #9c9c97;
+.gold-border {
+    border-color: #d8cd2c;
 }
 
-.pic-bestscorer-bronze{
-    border-radius: 50%;
-    border: 3px solid #724716;
+.silver-border {
+    border-color: #9c9c97;
 }
+
+.bronze-border {
+    border-color: #724716;
+}
+
+
 
 .bestscorer-team-logo{
     max-height: 2.5rem;
@@ -96,5 +100,8 @@
         max-width: 2rem;
         -o-object-fit: contain;
         object-fit: contain;
+    }
+    .pic-bestscorer {
+        border-width: 3px;
     }
 }

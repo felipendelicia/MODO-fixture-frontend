@@ -66,30 +66,29 @@ const Fixture = () => {
           <tr className="table-categories">
             <td>Equipo</td>
             <td>PJ</td>
-            <td>PG</td>
-            <td>PE</td>
-            <td>PP</td>
-            <td>PTS</td>
+            <td>P</td>
+            <td>P</td>
+            <td>P</td>
             <td>GF</td>
             <td>GE</td>
             <td>DG</td>
+            <td>PTS</td>
           </tr>
-          {teamsList.map((team: any) => {
-            if (team.group === "a") {
+          {teamsList.filter((team:any)=>team.group==="a").map((team: any, i: number) => {
+            const classifiedClass = i < 2 ? "classified" : "unclassified";
               return (
                 <tr>
-                  <td className="table-team-names"><img alt='shield' src={team.url} className='shield-image-fixture' /><span>{team.name}</span></td>
+                  <td className={`table-team-names ${classifiedClass}`}><img alt='shield' src={team.url} className='shield-image-fixture' /><span>{team.name}</span></td>
                   <td>{team.playedMatches}</td>
                   <td>{team.wins}</td>
                   <td>{team.draws}</td>
                   <td>{team.defeats}</td>
-                  <td>{team.points}</td>
                   <td>{team.gf}</td>
                   <td>{team.gc}</td>
                   <td>{team.gf - team.gc}</td>
+                  <td>{team.points}</td>
                 </tr>
               )
-            } else {return(<></>)}
           })}
         </table>
       </div>
@@ -99,30 +98,29 @@ const Fixture = () => {
           <tr className="table-categories">
             <td>Equipo</td>
             <td>PJ</td>
-            <td>PG</td>
-            <td>PE</td>
-            <td>PP</td>
-            <td>PTS</td>
+            <td>G</td>
+            <td>E</td>
+            <td>P</td>
             <td>GF</td>
             <td>GE</td>
             <td>DG</td>
+            <td>PTS</td>
           </tr>
-          {teamsList.map((team: any) => {
-            if (team.group === "b") {
+          {teamsList.filter((team:any)=>team.group==="b").map((team: any, i: number) => {
+            const classifiedClass = i < 2 ? "classified" : "unclassified";
               return (
                 <tr>
-                  <td className="table-team-names"><img alt='shield' src={team.url} className='shield-image-fixture' /><span>{team.name}</span></td>
+                  <td className={`table-team-names ${classifiedClass}`}><img alt='shield' src={team.url} className='shield-image-fixture' /><span>{team.name}</span></td>
                   <td>{team.playedMatches}</td>
                   <td>{team.wins}</td>
                   <td>{team.draws}</td>
                   <td>{team.defeats}</td>
-                  <td>{team.points}</td>
                   <td>{team.gf}</td>
                   <td>{team.gc}</td>
                   <td>{team.gf - team.gc}</td>
+                  <td>{team.points}</td>
                 </tr>
               )
-            } else {return(<></>)}
           })}
         </table>
       </div>

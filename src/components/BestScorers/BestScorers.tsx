@@ -7,9 +7,9 @@ import {goals} from "../../data/goals"
 import {teams} from "../../data/teams"
 
 const PIC_BESTCORERS_CLASS: {[key: number]: string} = {
-    0: "pic-bestscorer-gold",
-    1: "pic-bestscorer-silver",
-    2: "pic-bestscorer-bronze"
+    0: "gold-border",
+    1: "silver-border",
+    2: "bronze-border"
 }
 
 const BestScorers = () => {
@@ -46,7 +46,7 @@ const BestScorers = () => {
             return(
                 <div className="bestscorer-container">
                     <div className="pic-bestscorer-name">
-                        <img className={className} src={player?.picUrl} alt="player"/>
+                        <img className={`pic-bestscorer ${className}`} src={player?.picUrl} alt="player"/>
                         <img className="bestscorer-team-logo" src={player?.teamLogo} alt="teamLogo"/>
                         <p className="bestscorer-name">{player?.name}</p>
                         <div className="golden-boot-container">
