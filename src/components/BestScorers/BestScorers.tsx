@@ -44,7 +44,7 @@ const BestScorers = () => {
         {playersList.map((player, i)=>{
             const className = PIC_BESTCORERS_CLASS[i];
             return(
-                <div className="bestscorer-container">
+                <div className="bestscorer-container" key={i}>
                     <div className="pic-bestscorer-name">
                         <img className={`pic-bestscorer ${className}`} src={player?.picUrl} alt="player"/>
                         <img className="bestscorer-team-logo" src={player?.teamLogo} alt="teamLogo"/>

@@ -1,12 +1,12 @@
 .fixture-container{
     display: flex;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin: 3em 0;
     justify-content: center;
+    width: 100%;
 }
 
-.fixture-group-container{
-    margin: 1em;
+.fixture-group-container:first-child{
+    padding-right: 1em;
 }
 
 .group-title{
@@ -14,7 +14,7 @@
     color: #25c2a0;
     display: flex;
     justify-content: center;
-    margin-top: 1em;
+    margin-top: 0.5em;
     margin-bottom:0.5em; 
 }
 
@@ -59,7 +59,14 @@ td{
     .fixture-container{
         display: block;
     }
+    .table-container{
+        width: 100%;
+    }
     td{
         font-size: 1.3em;
+    }
+    tr{
+        display: grid;
+        grid-template-columns: 40% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5%;
     }
 }
