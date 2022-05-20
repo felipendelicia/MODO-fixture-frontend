@@ -317,14 +317,14 @@ export const goals = [
     {
         "id": "46",
         "matchId": "4",
-        "playerGoalId": "52",
+        "playerGoalId": "71",
         "teamId": "8",
         "teamReceivedId": "3"
     },
     {
         "id": "47",
         "matchId": "4",
-        "playerGoalId": "52",
+        "playerGoalId": "71",
         "teamId": "8",
         "teamReceivedId": "3"
     },
