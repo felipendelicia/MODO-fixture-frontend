@@ -29,6 +29,7 @@ const Fixture = () => {
         gc: goals.filter((goal) => {
           return goal.teamReceivedId === team.id
         }).length,
+        url: team.url
       })
     })
 
@@ -77,7 +78,7 @@ const Fixture = () => {
             if (team.group === "a") {
               return (
                 <tr>
-                  <td className="table-team-names">{team.name}</td>
+                  <td className="table-team-names"><img alt='shield' src={team.url} className='shield-image-fixture' /><span>{team.name}</span></td>
                   <td>{team.playedMatches}</td>
                   <td>{team.wins}</td>
                   <td>{team.draws}</td>
@@ -110,7 +111,7 @@ const Fixture = () => {
             if (team.group === "b") {
               return (
                 <tr>
-                  <td className="table-team-names">{team.name}</td>
+                  <td className="table-team-names"><img alt='shield' src={team.url} className='shield-image-fixture' /><span>{team.name}</span></td>
                   <td>{team.playedMatches}</td>
                   <td>{team.wins}</td>
                   <td>{team.draws}</td>

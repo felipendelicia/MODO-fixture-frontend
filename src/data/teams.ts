@@ -7,7 +7,8 @@ export const teams = [
         wins: 0,
         draws: 0,
         defeats: 2,
-        group:"a"
+        group:"a",
+        url: "https://user-images.githubusercontent.com/55720621/169422249-19d74bf3-86b7-4a48-8b38-9162830799d1.png"
     },
     {
         id: '2',
@@ -17,7 +18,8 @@ export const teams = [
         wins: 1,
         draws: 0,
         defeats: 1,
-        group:"a"
+        group:"a",
+        url: "https://user-images.githubusercontent.com/55720621/169429038-1e258fbb-0e50-45fb-adc7-10c35fddf81f.png"
     },
     {
         id: '3',
@@ -27,7 +29,8 @@ export const teams = [
         wins: 0,
         draws: 0,
         defeats: 1,
-        group:"b"
+        group:"b",
+        url: "https://user-images.githubusercontent.com/55720621/169429491-5a17a993-2bbf-4ad8-8c47-be97cc2eb963.png"
     },
     {
         id: '4',
@@ -37,7 +40,8 @@ export const teams = [
         wins: 1,
         draws: 0,
         defeats: 0,
-        group:"a"
+        group:"a",
+        url: "https://user-images.githubusercontent.com/55720621/169424674-f82c1267-58ce-4a26-8698-c6858faef336.png"
     },
     {
         id: '5',
@@ -47,7 +51,8 @@ export const teams = [
         wins: 0,
         draws: 1,
         defeats: 1,
-        group:"b"
+        group:"b",
+        url: "https://user-images.githubusercontent.com/55720621/169421932-493b7d68-b64e-408b-91f3-71d686463c16.png"
     },
     {
         id: '6',
@@ -57,7 +62,8 @@ export const teams = [
         wins: 1,
         draws: 0,
         defeats: 0,
-        group:"a"
+        group:"a",
+        url: "./assets/img/favicon.png"
     },
     {
         id: '7',
@@ -67,7 +73,8 @@ export const teams = [
         wins: 0,
         draws: 1,
         defeats: 0,
-        group:"b"
+        group:"b",
+        url: "https://user-images.githubusercontent.com/55720621/169429961-cca4d3dc-3e8f-4654-91e9-bb0894d97375.png"
     },
     {
         id: '8',
@@ -77,6 +84,7 @@ export const teams = [
         wins: 2,
         draws: 0,
         defeats: 0,
-        group:"b"
+        group:"b",
+        url: "https://user-images.githubusercontent.com/55720621/169430663-6a5868c8-b59b-41d3-8dcb-7a2d52646117.png"
     }
 ]

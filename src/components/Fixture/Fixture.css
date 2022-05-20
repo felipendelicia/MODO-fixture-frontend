@@ -33,8 +33,18 @@ td{
 }
 
 .table-team-names {
+    display: flex;
+    align-items: center;
     background-color: #008ae0;
     color: #fff;
+}
+
+.shield-image-fixture {
+    max-height: 30px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    margin: 0 0.5em 0 0;
+    padding: 0;
 }
 
 @media (max-width: 1200px){

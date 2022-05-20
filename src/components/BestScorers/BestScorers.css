@@ -28,7 +28,8 @@
 .pic-bestscorer-name{
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: left;
+    margin-left: 1rem;
 }
 
 .bestscorers-container p{
@@ -41,17 +42,8 @@
     font-size: 1.7em;
 }
 
-.bestscorer-1-name{
-    color: #a79f33;
-    
-}
-
-.bestscorer-2-name{
-    color: #6d6d68;
-}
-
-.bestscorer-3-name{
-    color: #724716;
+.bestscorer-name{
+    margin-left: 1rem;
 }
 
 .golden-boot-container{
@@ -80,6 +72,13 @@
     border: 3px solid #724716;
 }
 
+.bestscorer-team-logo{
+    max-height: 2.5rem;
+    -o-object-fit: contain;
+    object-fit: contain;
+    margin-right: 0 !important;
+}
+
 @media (max-width: 1200px){
     .bestscorers-container{
         margin: 4em 14em;
@@ -92,5 +91,10 @@
     }
     .bestscorer-container p{
         font-size: 2.4em
+    }
+    .bestscorer-team-logo {
+        max-width: 2rem;
+        -o-object-fit: contain;
+        object-fit: contain;
     }
 }

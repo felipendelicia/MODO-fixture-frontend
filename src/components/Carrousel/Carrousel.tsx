@@ -31,27 +31,19 @@ const buildDate = (date: string): string => {
 
 const Carrousel = () => {
 
-    const [matchesList, setMatchesList] = useState<{
-      id: string;
-      localName: string;
-      visitorName: string;
-      localScore: number;
-      visitorScore: number;
-      isPlayoff: boolean;
-      localScorePenalties: number;
-      visitorScorePenalties: number;
-      date: string;
-      time: string;
-      done: boolean;
-  }[]>([])
-    const [currentMatch, setCurrentMatch] = useState<{ id: string; localName: string; visitorName: string; localScore: number; visitorScore: number; isPlayoff: boolean; localScorePenalties: number; visitorScorePenalties: number; date: string; time: string; done: boolean; } | undefined>()
+    const [matchesList, setMatchesList] = useState<Match[]>([])
+    const [currentMatch, setCurrentMatch] = useState<Match | undefined>()
 
     useEffect(()=>{
         const currentMatches = matches.map((match)=>{
+            const localTeam = teams.find(team=>team.id===match.localId)!;
+            const visitorTeam = teams.find(team=>team.id===match.visitorId)!;
             return({
                 id: match.id,
-                localName: teams.find(team=>team.id===match.localId)!.name,
-                visitorName: teams.find(team=>team.id===match.visitorId)!.name,
+                localName: localTeam.name,
+                visitorName: visitorTeam.name,
+                urlLocal: localTeam.url,
+                urlVisitor: visitorTeam.url,
                 localScore: match.localScore,
                 visitorScore: match.visitorScore,
                 isPlayoff: match.isPlayoff,
@@ -59,7 +51,7 @@ const Carrousel = () => {
                 visitorScorePenalties: match.visitorScorePenalties,
                 date: buildDate(match.date),
                 time: match.time,
-                done: match.done
+                done: match.done,
             })
         })
         setMatchesList(currentMatches)
@@ -91,13 +83,13 @@ const Carrousel = () => {
       <div className="carrousel-container-main">
         <div className="carrousel-shields-scores">
           <div className="carrousel-shield-and-name">
-            <img src='./assets/img/favicon.png' alt="shield"/>
+            <img className="shield-image-carrousel" src={currentMatch?.urlLocal} alt="shield"/>
             <p>{currentMatch?.localName}</p>
           </div>
           <p className="score-match">{currentMatch?.done? currentMatch.localScore + " - "+ currentMatch.visitorScore:"vs"}</p>
           <div className="carrousel-shield-and-name">
             <p>{currentMatch?.visitorName}</p>
-            <img src='./assets/img/favicon.png' alt="shield"/>
+            <img className="shield-image-carrousel" src={currentMatch?.urlVisitor} alt="shield"/>
           </div>
         </div>
         <div className="carrousel-date-time">
@@ -115,6 +107,22 @@ const Carrousel = () => {
     
     </>
   )
+}
+
+interface Match {
+  id: string
+  localName: string
+  visitorName: string
+  localScore: number
+  visitorScore: number
+  isPlayoff: boolean
+  localScorePenalties: number
+  visitorScorePenalties: number
+  date: string
+  time: string
+  done: boolean
+  urlLocal: string
+  urlVisitor: string
 }
 
 export default Carrousel
