@@ -67,6 +67,7 @@ td:first-child{
 
 .td-points {
         background-color: rgba(37, 194, 160, 0.4);
+        font-weight: bolder;
 }
 
 @media (max-width: 1200px){
