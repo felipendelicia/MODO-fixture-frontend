@@ -1,8 +1,8 @@
+import {Route, Routes, BrowserRouter} from "react-router-dom"
+
 import "./App.css"
 
-import BestScorers from "./components/BestScorers/BestScorers";
-import Carrousel from "./components/Carrousel/Carrousel";
-import Fixture from "./components/Fixture/Fixture";
+import Home from "./views/Home";
 
 function App() {
   return (
@@ -11,11 +11,11 @@ function App() {
         <img src="./assets/img/modo-logo.svg" alt="modo logo"/>
         <h1>Torneo de fútbol</h1>
       </div>
-      <div className="container">
-        <Carrousel/>
-        <Fixture/>
-        <BestScorers/>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
