@@ -559,6 +559,29 @@ export const players = [
         "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03A3MQJ51P-00dbb37fdeca-512",
         "isCaptain": false,
         "teamId": "8"
-    }
+    },
+    {
+        "id": "71",
+        "name": "Pato Scordo",
+        "number": "100",
+        "picUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/HSBC_logo_%282018%29.svg/1920px-HSBC_logo_%282018%29.svg.png",
+        "isCaptain": false,
+        "teamId": "8"
+    },
+    {
+        "id": "72",
+        "name": "Sebastián Bascuñan",
+        "number": "100",
+        "picUrl": "https://media-exp1.licdn.com/dms/image/C4E0BAQH8NgFXakDtYw/company-logo_200_200/0/1621358929456?e=2147483647&v=beta&t=sNLV7cKtXtsew8NNcQ8qhq3fStiPm0EeiTukIWTwYSw",
+        "isCaptain": false,
+        "teamId": "4"
+    },
+    {
+        "id": "73",
+        "name": "Roger Savodivker",
+        "number": "73",
+        "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03FHF99K28-80f13c6ad8c9-512",
+        "isCaptain": false,
+        "teamId": "2"
+    },
 ]
-	
