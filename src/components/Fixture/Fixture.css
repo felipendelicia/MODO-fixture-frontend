@@ -65,4 +65,8 @@ td{
     td{
         font-size: 1.3em;
     }
+    tr{
+        display: grid;
+        grid-template-columns: 40% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5%;
+    }
 }
