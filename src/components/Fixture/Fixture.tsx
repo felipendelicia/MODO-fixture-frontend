@@ -77,7 +77,7 @@ const Fixture = () => {
           {teamsList.filter((team:any)=>team.group==="a").map((team: any, i: number) => {
             const classifiedClass = i < 2 ? "classified" : "unclassified";
               return (
-                <tr>
+                <tr key={i}>
                   <td className={`table-team-names ${classifiedClass}`}><img alt='shield' src={team.url} className='shield-image-fixture' /><span>{team.name}</span></td>
                   <td>{team.playedMatches}</td>
                   <td>{team.wins}</td>
@@ -109,7 +109,7 @@ const Fixture = () => {
           {teamsList.filter((team:any)=>team.group==="b").map((team: any, i: number) => {
             const classifiedClass = i < 2 ? "classified" : "unclassified";
               return (
-                <tr>
+                <tr key={i}>
                   <td className={`table-team-names ${classifiedClass}`}><img alt='shield' src={team.url} className='shield-image-fixture' /><span>{team.name}</span></td>
                   <td>{team.playedMatches}</td>
                   <td>{team.wins}</td>

@@ -18,9 +18,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           {
-            teams.map(team=>{
+            teams.map((team, index)=>{
               return(
-                <Route path={"/team/" + team.id} element={<Team teamObject={team}/>}/>
+                <Route path={"/team/" + team.id} element={<Team teamObject={team}/>} key={index}/>
               )
             })
           }

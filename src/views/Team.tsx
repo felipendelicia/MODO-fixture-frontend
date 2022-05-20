@@ -5,7 +5,7 @@ interface teamPropTypes {
 const Team = (props:teamPropTypes) => {
   return (
     <div className="container">
-        {props.teamObject.name}
+      {props.teamObject.name}
     </div>
   )
 }
