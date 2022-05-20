@@ -84,11 +84,11 @@ const Carrousel = () => {
         <div className="carrousel-shields-scores">
           <div className="carrousel-shield-and-name">
             <img className="shield-image-carrousel" src={currentMatch?.urlLocal} alt="shield"/>
-            <p>{currentMatch?.localName}</p>
+            <p className="carrousel-team-name">{currentMatch?.localName}</p>
           </div>
           <p className="score-match">{currentMatch?.done? currentMatch.localScore + " - "+ currentMatch.visitorScore:"vs"}</p>
           <div className="carrousel-shield-and-name">
-            <p>{currentMatch?.visitorName}</p>
+            <p className="carrousel-team-name">{currentMatch?.visitorName}</p>
             <img className="shield-image-carrousel" src={currentMatch?.urlVisitor} alt="shield"/>
           </div>
         </div>
