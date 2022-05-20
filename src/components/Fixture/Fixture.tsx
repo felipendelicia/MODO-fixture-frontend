@@ -66,8 +66,8 @@ const Fixture = () => {
           <tr className="table-categories">
             <td>Equipo</td>
             <td>PJ</td>
-            <td>P</td>
-            <td>P</td>
+            <td>G</td>
+            <td>E</td>
             <td>P</td>
             <td>GF</td>
             <td>GE</td>
