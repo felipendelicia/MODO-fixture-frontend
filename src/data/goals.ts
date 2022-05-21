@@ -572,5 +572,68 @@ export const goals = [
         "playerGoalId": "3",
         "teamId": "5",
         "teamReceivedId": "8"
+    },
+    {
+        "id": "83",
+        "matchId": "7",
+        "playerGoalId": "63",
+        "teamId": "4",
+        "teamReceivedId": "6"
+    },
+    {
+        "id": "84",
+        "matchId": "7",
+        "playerGoalId": "63",
+        "teamId": "4",
+        "teamReceivedId": "6"
+    },
+    {
+        "id": "85",
+        "matchId": "7",
+        "playerGoalId": "63",
+        "teamId": "4",
+        "teamReceivedId": "6"
+    },
+    {
+        "id": "85",
+        "matchId": "7",
+        "playerGoalId": "61",
+        "teamId": "4",
+        "teamReceivedId": "6"
+    },
+    {
+        "id": "86",
+        "matchId": "7",
+        "playerGoalId": "41",
+        "teamId": "6",
+        "teamReceivedId": "4"
+    },
+    {
+        "id": "87",
+        "matchId": "7",
+        "playerGoalId": "37",
+        "teamId": "6",
+        "teamReceivedId": "4"
+    },
+    {
+        "id": "88",
+        "matchId": "7",
+        "playerGoalId": "36",
+        "teamId": "6",
+        "teamReceivedId": "4"
+    },
+    {
+        "id": "89",
+        "matchId": "7",
+        "playerGoalId": "37",
+        "teamId": "6",
+        "teamReceivedId": "4"
+    },
+    {
+        "id": "90",
+        "matchId": "7",
+        "playerGoalId": "35",
+        "teamId": "6",
+        "teamReceivedId": "4"
     }
 ]
