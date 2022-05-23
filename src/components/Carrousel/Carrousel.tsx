@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import {matches} from "../../data/matches"
 import {teams} from "../../data/teams"
+import Modal from '../Modal/Modal'
 
 import "./Carrousel.css"
 
@@ -33,6 +34,7 @@ const Carrousel = () => {
 
     const [matchesList, setMatchesList] = useState<Match[]>([])
     const [currentMatch, setCurrentMatch] = useState<Match | undefined>()
+    const [toggleShowMatch, setToggleShowMatch] = useState<boolean>(false)
 
     useEffect(()=>{
         const currentMatches = matches.map((match)=>{
@@ -55,7 +57,6 @@ const Carrousel = () => {
             })
         })
         setMatchesList(currentMatches)
-
         setCurrentMatch(currentMatches.find((match)=>{return match.done===false}))
     },[])
 
@@ -77,8 +78,15 @@ const Carrousel = () => {
       }
     }
 
+    const toggleModalView = () =>{
+      if(toggleShowMatch){
+        setToggleShowMatch(false)
+      } else {
+        setToggleShowMatch(true)
+      }
+    }
+
   return (
-    <>
     <div className="carrousel-container">
       <div className="carrousel-container-main">
         <div className="carrousel-shields-scores">
@@ -103,12 +111,15 @@ const Carrousel = () => {
         <div onClick={previousMatch}>Anterior</div>
         <div onClick={nextMatch}>Siguiente</div>
       </div>
-      <div className="carrousel-see-more-button">
+      <div className="carrousel-see-more-button" onClick={toggleModalView}>
         Ver más
       </div>
+      {
+        toggleShowMatch
+        ? <Modal toggleState={()=>{setToggleShowMatch(false)}}/>
+        : <></>
+      }
     </div>
-    
-    </>
   )
 }
 
