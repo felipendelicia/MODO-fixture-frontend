@@ -635,5 +635,138 @@ export const goals = [
         "playerGoalId": "35",
         "teamId": "6",
         "teamReceivedId": "4"
+    },
+    {
+        "id": "91",
+        "matchId": "8",
+        "playerGoalId": "43",
+        "teamId": "7",
+        "teamReceivedId": "3"
+    },
+    {
+        "id": "92",
+        "matchId": "8",
+        "playerGoalId": "43",
+        "teamId": "7",
+        "teamReceivedId": "3"
+    },
+    {
+        "id": "93",
+        "matchId": "8",
+        "playerGoalId": "43",
+        "teamId": "7",
+        "teamReceivedId": "3"
+    },
+    {
+        "id": "94",
+        "matchId": "8",
+        "playerGoalId": "43",
+        "teamId": "7",
+        "teamReceivedId": "3"
+    },
+    {
+        "id": "95",
+        "matchId": "8",
+        "playerGoalId": "45",
+        "teamId": "7",
+        "teamReceivedId": "3"
+    },
+    {
+        "id": "96",
+        "matchId": "8",
+        "playerGoalId": "45",
+        "teamId": "7",
+        "teamReceivedId": "3"
+    },
+    {
+        "id": "97",
+        "matchId": "8",
+        "playerGoalId": "45",
+        "teamId": "7",
+        "teamReceivedId": "3"
+    },
+    {
+        "id": "98",
+        "matchId": "8",
+        "playerGoalId": "34",
+        "teamId": "3",
+        "teamReceivedId": "7"
+    },
+    {
+        "id": "99",
+        "matchId": "8",
+        "playerGoalId": "34",
+        "teamId": "3",
+        "teamReceivedId": "7"
+    },
+    {
+        "id": "100",
+        "matchId": "8",
+        "playerGoalId": "34",
+        "teamId": "3",
+        "teamReceivedId": "7"
+    },
+    {
+        "id": "101",
+        "matchId": "8",
+        "playerGoalId": "34",
+        "teamId": "3",
+        "teamReceivedId": "7"
+    },
+    {
+        "id": "102",
+        "matchId": "8",
+        "playerGoalId": "34",
+        "teamId": "3",
+        "teamReceivedId": "7"
+    },
+    {
+        "id": "103",
+        "matchId": "8",
+        "playerGoalId": "34",
+        "teamId": "3",
+        "teamReceivedId": "7"
+    },
+    {
+        "id": "104",
+        "matchId": "8",
+        "playerGoalId": "29",
+        "teamId": "3",
+        "teamReceivedId": "7"
+    },
+    {
+        "id": "105",
+        "matchId": "8",
+        "playerGoalId": "67",
+        "teamId": "3",
+        "teamReceivedId": "7"
+    },
+    {
+        "id": "106",
+        "matchId": "8",
+        "playerGoalId": "67",
+        "teamId": "3",
+        "teamReceivedId": "7"
+    },
+    {
+        "id": "107",
+        "matchId": "8",
+        "playerGoalId": "67",
+        "teamId": "3",
+        "teamReceivedId": "7"
+    },
+    {
+        "id": "108",
+        "matchId": "8",
+        "playerGoalId": "30",
+        "teamId": "3",
+        "teamReceivedId": "7"
+    },
+    {
+        "id": "109",
+        "matchId": "8",
+        "playerGoalId": "30",
+        "teamId": "3",
+        "teamReceivedId": "7"
     }
 ]
