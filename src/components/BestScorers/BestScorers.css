@@ -74,13 +74,39 @@
     border-color: #724716;
 }
 
-
-
 .bestscorer-team-logo{
     max-height: 2.5rem;
     -o-object-fit: contain;
     object-fit: contain;
     margin-right: 0 !important;
+}
+
+.bestscorers-footer{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.btn-bestscorers{
+    border:rgb(0 0 0 / 0.1);
+    display: inline;
+    background-color: #25c2a0;
+    border-radius: 5px;
+    padding: 1em 2em;
+    font-size: 1em;
+    font-family: Roboto-regular;
+    color: #fff;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+.btn-bestscorers:hover{
+    background-color: #1ea88a;
+}
+
+.divisor{
+    margin: 0 25em;
+    border-top: 3px solid #d8cd2c;
 }
 
 @media (max-width: 1200px){
@@ -103,5 +129,11 @@
     }
     .pic-bestscorer {
         border-width: 3px;
+    }
+    .divisor {
+        margin: 0 15em;
+    }
+    .btn-bestscorers{
+        font-size: 1.5em;
     }
 }
