@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 import "./Modal.css"
 
 interface ModalTypeProps{
-  toggleState:()=>void
+  toggleState:()=>void;
+  modalComponent:ReactNode
 }
 
 const Modal = (props:ModalTypeProps) => {
@@ -11,6 +12,7 @@ const Modal = (props:ModalTypeProps) => {
     <div className="modal-container">
         <div className="modal-main">
           <div className="modal-component-showed">
+            {props.modalComponent}
           </div>
           <div className='modal-close-button' onClick={props.toggleState}>
             Cerrar

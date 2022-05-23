@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import {matches} from "../../data/matches"
 import {teams} from "../../data/teams"
+import MatchModal from '../Match/MatchModal'
 import Modal from '../Modal/Modal'
 
 import "./Carrousel.css"
@@ -35,7 +36,7 @@ const Carrousel = () => {
     const [matchesList, setMatchesList] = useState<Match[]>([])
     const [currentMatch, setCurrentMatch] = useState<Match | undefined>()
     const [toggleShowMatch, setToggleShowMatch] = useState<boolean>(false)
-
+    
     useEffect(()=>{
         const currentMatches = matches.map((match)=>{
             const localTeam = teams.find(team=>team.id===match.localId)!;
@@ -86,6 +87,8 @@ const Carrousel = () => {
       }
     }
 
+    const currentMatchModal = <MatchModal currentMatchModal={currentMatch}/>
+
   return (
     <div className="carrousel-container">
       <div className="carrousel-container-main">
@@ -116,7 +119,7 @@ const Carrousel = () => {
       </div>
       {
         toggleShowMatch
-        ? <Modal toggleState={()=>{setToggleShowMatch(false)}}/>
+        ? <Modal toggleState={()=>{toggleModalView()}} modalComponent={currentMatchModal}/>
         : <></>
       }
     </div>
