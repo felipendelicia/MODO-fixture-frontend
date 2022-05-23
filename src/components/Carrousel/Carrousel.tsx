@@ -57,6 +57,7 @@ const Carrousel = () => {
                 date: buildDate(match.date),
                 time: match.time,
                 done: match.done,
+                urlVideo: match.urlVideo,
             })
         })
         setMatchesList(currentMatches)
@@ -144,6 +145,7 @@ interface Match {
   done: boolean
   urlLocal: string
   urlVisitor: string
+  urlVideo: string | undefined
 }
 
 export default Carrousel

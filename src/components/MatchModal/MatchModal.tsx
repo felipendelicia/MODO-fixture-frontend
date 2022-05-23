@@ -2,10 +2,14 @@ import React from 'react'
 
 import "./MatchModal.css"
 
+import {teams} from "../../data/teams"
+import {players} from "../../data/players"
+import {goals} from "../../data/goals"
+
 interface MatchModalPropsTypes {
   currentMatchModal: {id: string; localName: string; visitorName: string; localScore: number; visitorScore: number; isPlayoff: boolean
     localScorePenalties: number; visitorScorePenalties: number; date: string; time: string; done: boolean; urlLocal: string
-    urlVisitor: string; localTeamId: string; visitorTeamId: string} | undefined
+    urlVisitor: string; localTeamId: string; visitorTeamId: string; urlVideo: string|undefined} | undefined
 }
 
 const Match = (props:MatchModalPropsTypes) => {
@@ -25,8 +29,8 @@ const Match = (props:MatchModalPropsTypes) => {
     done:                   props.currentMatchModal?.done,
     urlLocal:               props.currentMatchModal?.urlLocal,
     urlVisitor:             props.currentMatchModal?.urlVisitor,
-
   }
+
 
   return (
     <div className='matchmodal-container'>
