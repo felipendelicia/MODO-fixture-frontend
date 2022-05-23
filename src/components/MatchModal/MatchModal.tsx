@@ -14,6 +14,24 @@ interface MatchModalPropsTypes {
 
 const Match = (props:MatchModalPropsTypes) => {
 
+  const filterGoalsForMatchId = goals.filter(goal=>{return goal.matchId===props.currentMatchModal?.id})
+
+  const teamGoals = (teamId:String) => {
+    let teamPlayers = teams.find(team=>team.id===props.currentMatchModal?.localTeamId)!.player_ids
+    let scorersList = []
+
+    for(let i:number = 0; i<teamPlayers?.length; i++ ){
+      let playerName = players.find(player=>teamPlayers[i]===player.id)
+      let playerGoals = filterGoalsForMatchId.filter(goal=>{return teamPlayers[i]===goal.playerGoalId}).length
+
+      for(let j:number = 0; j<playerGoals; j++){
+        scorersList.push(playerName)
+      }
+    }
+
+    return scorersList
+  }
+
   const currentMatchModal = {
     localName:              props.currentMatchModal?.localName,
     visitorName:            props.currentMatchModal?.visitorName,
@@ -29,6 +47,9 @@ const Match = (props:MatchModalPropsTypes) => {
     done:                   props.currentMatchModal?.done,
     urlLocal:               props.currentMatchModal?.urlLocal,
     urlVisitor:             props.currentMatchModal?.urlVisitor,
+    urlVideo:               props.currentMatchModal?.urlVideo,
+    localScorers:           teamGoals(props.currentMatchModal?.localTeamId as string),
+    visitorScorers:         teamGoals(props.currentMatchModal?.visitorTeamId as string),
   }
 
 
