@@ -12,10 +12,13 @@
 }
 
 .modal-main{
+    margin: 0 8em;
     display: inline;
     background-color: #fff;
     border-radius: 7px;
     text-align: center;
+    width: 100%;
+    padding: 2em;
 }
 
 .modal-close-button{
@@ -27,4 +30,10 @@
     color: #fff;
     cursor: pointer;
     transition: all 400ms ease-in-out;
+}
+
+@media (max-width: 1200px){
+    .modal-main{
+        margin: 0 3em;
+    }
 }

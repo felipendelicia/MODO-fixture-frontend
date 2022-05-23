@@ -12,7 +12,7 @@ interface MatchModalPropsTypes {
     urlVisitor: string; localTeamId: string; visitorTeamId: string; urlVideo: string|undefined} | undefined
 }
 
-const Match = (props:MatchModalPropsTypes) => {
+const MatchModal = (props:MatchModalPropsTypes) => {
 
   const filterGoalsForMatchId = goals.filter(goal=>{return goal.matchId===props.currentMatchModal?.id})
 
@@ -73,4 +73,4 @@ const Match = (props:MatchModalPropsTypes) => {
   )
 }
 
-export default Match
+export default MatchModal
