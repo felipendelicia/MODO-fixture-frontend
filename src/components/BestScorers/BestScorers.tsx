@@ -17,15 +17,42 @@ enum SHOW_ALL_BUTTON_TEXT_OPTIONS {
     SHOW_LESS = "Ver menos"
 }
 
+interface IPlayer {
+    id: string;
+    name: string;
+    picUrl: string;
+    teamName: string;
+    playerGoals: number;
+    teamLogo: string;
+}
+
+interface CardProps {
+    name: string
+    color: string
+    photo: string
+    logo: string
+    i: number
+}
+
+const Card = (props: CardProps) => {
+    const { name, color, photo, logo, i } = props;
+
+    return (
+        <>
+            <div className={`pic-bestscorer-name card-more-than-one`}>
+                <img className={`pic-bestscorer ${color}`} src={photo} alt="player" />
+                <img className="bestscorer-team-logo" src={logo} alt="teamLogo" />
+                <p className="bestscorer-name">{name}</p>
+                <div className="golden-boot-container">
+                    {i === 0 ? <img className="golden-boot" src='./assets/img/botin_oro.png' alt="golden-boot" /> : <></>}
+                </div>
+            </div>
+        </>
+    )
+}
+
 const BestScorers = () => {
-    const [playersList, setPlayersList] = useState<{
-        id: string;
-        name: string;
-        picUrl: string;
-        teamName: string;
-        playerGoals: number;
-        teamLogo: string;
-    }[]>([]);
+    const [playersList, setPlayersList] = useState<IPlayer[][]>([]);
     const [showAll, setShowAll] = useState<boolean>(false);
     const [ToggleShowText, setToggleShowText] = useState<SHOW_ALL_BUTTON_TEXT_OPTIONS>(SHOW_ALL_BUTTON_TEXT_OPTIONS.SHOW_MORE);
 
@@ -45,12 +72,28 @@ const BestScorers = () => {
         })
 
         let sortedPlayers = allPlayers.sort((a, b) => { return b.playerGoals - a.playerGoals })
+        sortedPlayers = sortedPlayers.filter((player) => { return player.playerGoals > 0 })
+
+        let groupedPlayers = [];
+
+        for (let i = 0; i < sortedPlayers.length; i++) {
+            if (groupedPlayers.length > 0) {
+                const lastPlayer = groupedPlayers[groupedPlayers.length - 1];
+
+                if (lastPlayer && lastPlayer[0].playerGoals === sortedPlayers[i].playerGoals) {
+                    groupedPlayers[groupedPlayers.length - 1].push(sortedPlayers[i]);
+                } else {
+                    groupedPlayers.push([sortedPlayers[i]]);
+                }
+            } else {
+                groupedPlayers.push([sortedPlayers[i]])
+            }
+        }
 
         if (showAll) {
-            sortedPlayers = sortedPlayers.filter((player) => { return player.playerGoals > 0 })
-            setPlayersList(sortedPlayers)
+            setPlayersList(groupedPlayers)
         } else {
-            setPlayersList(sortedPlayers.slice(0, 3))
+            setPlayersList(groupedPlayers.slice(0, 3))
         }
     }, [showAll])
 
@@ -62,23 +105,24 @@ const BestScorers = () => {
     return (
         <div className="bestscorers-container">
             <h3>Goleadores</h3>
-            {playersList.map((player, i) => {
+            {playersList.map((group: IPlayer[], i: number) => {
                 const className = PIC_BESTCORERS_CLASS[i];
+                const goals = group? group[0].playerGoals : '';
                 return (
-                    <>
-                        <div className="bestscorer-container" key={i}>
-                            <div className="pic-bestscorer-name">
-                                <img className={`pic-bestscorer ${className}`} src={player?.picUrl} alt="player" />
-                                <img className="bestscorer-team-logo" src={player?.teamLogo} alt="teamLogo" />
-                                <p className="bestscorer-name">{player?.name}</p>
-                                <div className="golden-boot-container">
-                                    {i === 0 ? <img className="golden-boot" src='./assets/img/botin_oro.png' alt="golden-boot" /> : <></>}
-                                </div>
-                            </div>
-                            <p className="bestscorer-goals">{player?.playerGoals}</p>
+                    <div className='bestscorer-container-group'>
+                        <p className="bestscorer-goals">{goals}</p>
+                        <div className={`bestscorer-container more-than-one`} key={i}>
+                            {group.map((player: IPlayer) => {
+
+                                return <Card 
+                                name={player.name}
+                                photo={player.picUrl}
+                                logo={player.teamLogo}
+                                color={className}
+                                i={i}/>
+                                })}
                         </div>
-                        {i === 2 && showAll ? <hr className='divisor'></hr> : <></>}
-                    </>
+                    </div>
                 )
             })}
             <div className="bestscorers-footer">
