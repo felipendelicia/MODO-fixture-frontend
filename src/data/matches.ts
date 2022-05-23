@@ -97,14 +97,14 @@ export const matches = [
         id: '8',
         localId: '7',
         visitorId: '3',
-        localScore: 0,
-        visitorScore: 0,
+        localScore: 7,
+        visitorScore: 12,
         isPlayoff: false,
         localScorePenalties: 0,
         visitorScorePenalties: 0,
         date: '2022-05-20',
         time: '20:00',
-        done: false
+        done: true
     },
     {
         id: '9',
