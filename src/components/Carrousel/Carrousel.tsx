@@ -103,6 +103,9 @@ const Carrousel = () => {
         <div onClick={previousMatch}>Anterior</div>
         <div onClick={nextMatch}>Siguiente</div>
       </div>
+      <div className="carrousel-see-more-button">
+        Ver más
+      </div>
     </div>
     
     </>

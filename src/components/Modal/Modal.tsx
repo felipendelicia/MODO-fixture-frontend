@@ -10,7 +10,7 @@ const Modal = () => {
 
           </div>
           <div className='modal-close-button'>
-            cerrar
+            Cerrar
           </div>
         </div>
     </div>
