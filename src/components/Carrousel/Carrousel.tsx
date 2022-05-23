@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import {matches} from "../../data/matches"
 import {teams} from "../../data/teams"
-import MatchModal from '../Match/MatchModal'
+import MatchModal from '../MatchModal/MatchModal'
 import Modal from '../Modal/Modal'
 
 import "./Carrousel.css"
@@ -43,6 +43,8 @@ const Carrousel = () => {
             const visitorTeam = teams.find(team=>team.id===match.visitorId)!;
             return({
                 id: match.id,
+                localTeamId: match.localId,
+                visitorTeamId: match.visitorId,
                 localName: localTeam.name,
                 visitorName: visitorTeam.name,
                 urlLocal: localTeam.url,
@@ -128,6 +130,8 @@ const Carrousel = () => {
 
 interface Match {
   id: string
+  localTeamId: string
+  visitorTeamId: string
   localName: string
   visitorName: string
   localScore: number
