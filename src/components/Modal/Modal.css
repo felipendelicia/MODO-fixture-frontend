@@ -12,8 +12,7 @@
 }
 
 .modal-main{
-    width: 50%;
-    height: 60%;
+    display: inline;
     background-color: #fff;
     border-radius: 7px;
     text-align: center;

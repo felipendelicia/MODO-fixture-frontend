@@ -52,10 +52,23 @@ const Match = (props:MatchModalPropsTypes) => {
     visitorScorers:         teamGoals(props.currentMatchModal?.visitorTeamId as string),
   }
 
-
   return (
     <div className='matchmodal-container'>
-      {currentMatchModal.localName + " vs " + currentMatchModal.visitorName}
+        <div className="modal-shields-scores">
+          <div className="modal-shield-and-name">
+            <img className="shield-image-modal" src={currentMatchModal.urlLocal} alt="shield"/>
+            <p className="modal-team-name">{currentMatchModal.localName}</p>
+          </div>
+          <p className="score-match-modal">{currentMatchModal.done? currentMatchModal.localScore + " - "+ currentMatchModal.visitorScore:"vs"}</p>
+          <div className="modal-shield-and-name">
+            <p className="modal-team-name">{currentMatchModal?.visitorName}</p>
+            <img className="shield-image-modal" src={currentMatchModal?.urlVisitor} alt="shield"/>
+          </div>
+        </div>
+        <div className="modal-date-time">
+          <p>{currentMatchModal?.date}</p>
+          <p>{currentMatchModal?.time}</p>
+        </div>
     </div>
   )
 }

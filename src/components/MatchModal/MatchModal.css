@@ -1,0 +1,45 @@
+.modal-shields-scores{
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.modal-shield-and-name{
+    display: flex;
+    align-items: center;
+}
+
+.modal-shield-and-name img{
+    width: 4em;
+}
+
+.modal-shield-and-name p{
+    margin: 0 1em;
+    font-family: Roboto-bold;
+    font-size: 2em;
+    color: #25c2a0;
+}
+
+.shield-img-modal{
+    max-height: 64px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.score-match-modal{
+    font-family: Roboto-regular;
+    font-size: 1.1em;
+    white-space: nowrap;
+}
+
+.modal-date-time{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-items: center;
+    font-family: Roboto-regular;
+    color: #1c1e21;
+}
