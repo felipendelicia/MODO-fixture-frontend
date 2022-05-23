@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
 import "./BestScorers.css"
+import "./Card.css"
+import "./RankingStyles.css"
 
 import { players } from "../../data/players"
 import { goals } from "../../data/goals"

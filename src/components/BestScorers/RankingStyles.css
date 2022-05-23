@@ -1,0 +1,22 @@
+.gold-border {
+    border-color: #d8cd2c;
+}
+
+.silver-border {
+    border-color: #9c9c97;
+}
+
+.bronze-border {
+    border-color: #724716;
+}
+
+.golden-boot-container{
+    height: 2.5em;
+    width: 3em;
+}
+
+.golden-boot{
+    position: relative;
+    max-height: 100%;
+    max-width: 100%;
+}
