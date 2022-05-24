@@ -12,6 +12,37 @@ interface MatchModalPropsTypes {
     urlVisitor: string; localTeamId: string; visitorTeamId: string; urlVideo: string|undefined} | undefined
 }
 
+const PlayedMatchVideoButton = () => {
+  return (
+    <div className="playedmatchvideo-button">
+      Ver video
+    </div>
+  )
+}
+
+const PlayedOffMatch = () => {
+  return (
+    <div className="playedoffmatch-modal-container">
+      <div className="playedoffmatch-title"> Penales </div>
+      <p className="playedoffmatch-scores">-</p>
+    </div>
+  )
+}
+
+const PlayedMatchModal = () => {
+  return (
+    <div className='playedmatch-modal-container'>
+      <div className='players-scorers-playedmatch-main'>
+        <div className="players-scorers-playedmatch">
+          1
+        </div>
+        <div className="players-scorers-playedmatch">
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const MatchModal = (props:MatchModalPropsTypes) => {
 
   const filterGoalsForMatchId = goals.filter(goal=>{return goal.matchId===props.currentMatchModal?.id})
@@ -69,6 +100,28 @@ const MatchModal = (props:MatchModalPropsTypes) => {
           <p>{currentMatchModal?.date}</p>
           <p>{currentMatchModal?.time}</p>
         </div>
+
+        {/* Agrego los jugadores que metieron gol solo si se jugó el partido */}
+
+        {
+          currentMatchModal.done === true &&
+          <PlayedMatchModal/>
+        }
+
+        {/* Agrego el resultado de los penales solo si el partido fue definido asi*/}
+
+        {
+          currentMatchModal.isPlayOff === true && currentMatchModal.done === true &&
+          <PlayedOffMatch/>
+        }
+
+        {/* Agrego el button para ver el video del partido solo si lo hay */}
+
+        {
+          currentMatchModal.urlVideo !== undefined &&
+          <PlayedMatchVideoButton/>
+        }
+
     </div>
   )
 }
