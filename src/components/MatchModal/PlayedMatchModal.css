@@ -17,6 +17,12 @@
     font-family: Roboto-regular;
 }
 
+.player-scorer-container p:first-child{
+    margin-right: 1em;
+    color: #25c2a0;
+    font-size: 1.3em;
+}
+
 .player-scorer-container{
     display: flex;
     align-items: center;

@@ -15,8 +15,8 @@ interface MatchModalPropsTypes {
 }
 
 interface playedMatchModalProps {
-  localScorers: ({ id: string; name: string; number: string; picUrl: string; isCaptain: boolean; teamId: string; } | undefined)[];
-  visitorScorers: ({ id: string; name: string; number: string; picUrl: string; isCaptain: boolean; teamId: string; } | undefined)[]
+  localScorers: { name: string; picUrl: string; quantity: number; }[];
+  visitorScorers: { name: string; picUrl: string; quantity: number; }[]
 }
 
 const PlayedMatchVideoButton = (props:{videoURL:string}) => {
@@ -47,7 +47,8 @@ const PlayedMatchModal = (props: playedMatchModalProps) => {
             props.localScorers.map((player, i)=>{
               return(
                 <div className="player-scorer-container">
-                  <img src={player?.picUrl}/>
+                  <p>{player.quantity}</p>
+                  <img src={player?.picUrl} alt={player?.name}/>
                   <p>{player?.name}</p>
                 </div>
               )
@@ -59,7 +60,8 @@ const PlayedMatchModal = (props: playedMatchModalProps) => {
             props.visitorScorers.map((player, i)=>{
               return(
                 <div className="player-scorer-container">
-                  <img src={player?.picUrl}/>
+                  <p>{player.quantity}</p>
+                  <img src={player?.picUrl} alt={player?.name}/>
                   <p>{player?.name}</p>
                 </div>
               )
@@ -91,6 +93,25 @@ const MatchModal = (props:MatchModalPropsTypes) => {
     return scorersList
   }
 
+  const quantityGoalsForPlayer = (scorersList: ({ id: string; name: string; number: string; picUrl: string; isCaptain: boolean; teamId: string; } | undefined)[]) => {
+
+    let scorers:{name:string; picUrl:string; quantity:number}[] = []
+
+    for(let i:number = 0;i<scorersList.length;i++){
+      if( scorers.find(scorer=>{return scorer.name === scorersList[i]?.name}) === undefined ){
+        scorers.push({
+          name: scorersList[i]?.name as string,
+          picUrl: scorersList[i]?.picUrl as string,
+          quantity: 1
+        })        
+      } else{
+        scorers.find(scorer=>{return scorer.name === scorersList[i]?.name})!.quantity += 1
+      }
+    }
+
+    return scorers
+  }
+
   const currentMatchModal = {
     localName:              props.currentMatchModal?.localName,
     visitorName:            props.currentMatchModal?.visitorName,
@@ -107,8 +128,8 @@ const MatchModal = (props:MatchModalPropsTypes) => {
     urlLocal:               props.currentMatchModal?.urlLocal,
     urlVisitor:             props.currentMatchModal?.urlVisitor,
     urlVideo:               props.currentMatchModal?.urlVideo,
-    localScorers:           teamGoals(props.currentMatchModal?.localTeamId as string),
-    visitorScorers:         teamGoals(props.currentMatchModal?.visitorTeamId as string),
+    localScorers:           quantityGoalsForPlayer(teamGoals(props.currentMatchModal?.localTeamId as string)),
+    visitorScorers:         quantityGoalsForPlayer(teamGoals(props.currentMatchModal?.visitorTeamId as string)),
   }
 
   return (
