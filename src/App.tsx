@@ -5,14 +5,20 @@ import "./App.css"
 import { teams } from "./data/teams";
 
 import Home from "./views/Home";
-import Team from "./views/Team"
+import Team from "./views/Team";
+import Facts from "./components/Facts/Facts";
 
 function App() {
   return (
     <div className="App">
       <div className="header">
-        <img src="./assets/img/modo-logo.svg" alt="modo logo"/>
-        <h1>Torneo de fútbol</h1>
+        <div className="header-logo-and-title">
+          <img src="./assets/img/modo-logo.svg" alt="modo logo"/>
+          <h1>Torneo de fútbol</h1>
+        </div>
+        <div className="header-facts">
+          <Facts/>
+        </div>
       </div>
       <BrowserRouter>
         <Routes>

@@ -1,0 +1,21 @@
+.playedmatchvideo-button{
+    display: inline-block;
+    background-color: #25c2a0;
+    padding: 0.2em 0.6em;
+    border-radius: 5px;
+    font-family: Roboto-regular;
+    color: #fff;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+    margin: 1em 0;
+}
+
+.playedmatchvideo-button:hover{
+    background-color: #1ea88a;
+}
+
+@media (max-width: 1200px){
+    .playedmatchvideo-button{
+        font-size: 2em;
+    }
+}

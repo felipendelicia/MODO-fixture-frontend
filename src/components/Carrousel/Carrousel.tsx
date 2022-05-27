@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 
 import {matches} from "../../data/matches"
 import {teams} from "../../data/teams"
+import MatchModal from '../MatchModal/MatchModal'
+import Modal from '../Modal/Modal'
 
 import "./Carrousel.css"
 
@@ -33,13 +35,16 @@ const Carrousel = () => {
 
     const [matchesList, setMatchesList] = useState<Match[]>([])
     const [currentMatch, setCurrentMatch] = useState<Match | undefined>()
-
+    const [toggleShowMatch, setToggleShowMatch] = useState<boolean>(false)
+    
     useEffect(()=>{
         const currentMatches = matches.map((match)=>{
             const localTeam = teams.find(team=>team.id===match.localId)!;
             const visitorTeam = teams.find(team=>team.id===match.visitorId)!;
             return({
                 id: match.id,
+                localTeamId: match.localId,
+                visitorTeamId: match.visitorId,
                 localName: localTeam.name,
                 visitorName: visitorTeam.name,
                 urlLocal: localTeam.url,
@@ -52,10 +57,10 @@ const Carrousel = () => {
                 date: buildDate(match.date),
                 time: match.time,
                 done: match.done,
+                urlVideo: match.urlVideo,
             })
         })
         setMatchesList(currentMatches)
-
         setCurrentMatch(currentMatches.find((match)=>{return match.done===false}))
     },[])
 
@@ -77,8 +82,17 @@ const Carrousel = () => {
       }
     }
 
+    const toggleModalView = () =>{
+      if(toggleShowMatch){
+        setToggleShowMatch(false)
+      } else {
+        setToggleShowMatch(true)
+      }
+    }
+
+    const currentMatchModal = <MatchModal currentMatchModal={currentMatch}/>
+
   return (
-    <>
     <div className="carrousel-container">
       <div className="carrousel-container-main">
         <div className="carrousel-shields-scores">
@@ -103,14 +117,24 @@ const Carrousel = () => {
         <div onClick={previousMatch}>Anterior</div>
         <div onClick={nextMatch}>Siguiente</div>
       </div>
+      <div className="carrousel-see-more-button" onClick={toggleModalView}>
+        Ver más
+      </div>
+      {
+        toggleShowMatch
+        ? <Modal 
+        toggleState={()=>{toggleModalView()}} 
+        modalComponent={currentMatchModal}/>
+        : <></>
+      }
     </div>
-    
-    </>
   )
 }
 
 interface Match {
   id: string
+  localTeamId: string
+  visitorTeamId: string
   localName: string
   visitorName: string
   localScore: number
@@ -123,6 +147,7 @@ interface Match {
   done: boolean
   urlLocal: string
   urlVisitor: string
+  urlVideo: string | undefined
 }
 
 export default Carrousel

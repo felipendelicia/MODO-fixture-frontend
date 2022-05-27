@@ -1,0 +1,64 @@
+.bestscorer-team-logo{
+    max-height: 2.5rem;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.pic-bestscorer {
+    border-radius: 999999px;
+    border: 4px solid;
+    width: 6em;
+}
+
+.bestscorer-name{
+    margin-left: 1rem;
+}
+
+.pic-bestscorer-name{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+}
+
+.pic-bestscorer-name>img{
+    padding: 0;
+    margin: 0.2em;
+}
+
+.card-more-than-one>p{
+    padding: 0;
+    margin:0;
+}
+
+.card-more-than-one{
+    width: 100%;
+    padding: 0.5em;
+    display: grid;
+    grid-auto-rows: 1fr;
+    -ms-grid-row-align: center;
+    height: 100%;
+    grid-template-rows: 50% 20% 30%;
+    justify-items: center;
+    align-items: center;
+}
+
+@media (max-width: 1200px){
+    .pic-bestscorer-name img{
+        width: 8em;
+    }
+    .bestscorer-team-logo {
+        max-width: 2rem;
+        -o-object-fit: contain;
+        object-fit: contain;
+    }
+    .pic-bestscorer {
+        border-width: 3px;
+    }
+    .card-more-than-one{
+        width: 25%;
+    }
+}

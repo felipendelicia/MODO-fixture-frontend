@@ -1,0 +1,58 @@
+export const cards = [
+    {
+        id: "1",
+        playerId: "41",
+        type: 'yellow',
+        matchId: "1",
+        teamId: "6",
+    },
+    {
+        id: "2",
+        playerId: "24",
+        type: 'yellow',
+        matchId: "1",
+        teamId: "2",
+    },
+    {
+        id: "3",
+        playerId: "24",
+        type: 'red',
+        matchId: "1",
+        teamId: "2",
+    },
+    {
+        id: "4",
+        playerId: "7",
+        type: 'yellow',
+        matchId: "2",
+        teamId: "5",
+    },
+    {
+        id: "5",
+        playerId: "1",
+        type: 'yellow',
+        matchId: "2",
+        teamId: "5",
+    },
+    {
+        id: "6",
+        playerId: "43",
+        type: 'yellow',
+        matchId: "2",
+        teamId: "7",
+    },
+    {
+        id: "7",
+        playerId: "1",
+        type: 'red',
+        matchId: "2",
+        teamId: "5",
+    },
+    {
+        id: "8",
+        playerId: "47",
+        type: 'red',
+        matchId: "2",
+        teamId: "7",
+    },
+]
