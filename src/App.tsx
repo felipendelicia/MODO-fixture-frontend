@@ -26,6 +26,11 @@ function App() {
           }
         </Routes>
       </BrowserRouter>
+      <div className="footer">
+        <div>
+        <h4>Created by <a href="https://www.linkedin.com/in/felipe-nahuel-delicia-b2487119a/">Felipe Delicia</a> & <a href="https://www.linkedin.com/in/lucasdellasala/">Vlady</a></h4>
+        </div>
+      </div>
     </div>
   );
 }
