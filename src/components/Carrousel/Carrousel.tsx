@@ -122,7 +122,9 @@ const Carrousel = () => {
       </div>
       {
         toggleShowMatch
-        ? <Modal toggleState={()=>{toggleModalView()}} modalComponent={currentMatchModal}/>
+        ? <Modal 
+        toggleState={()=>{toggleModalView()}} 
+        modalComponent={currentMatchModal}/>
         : <></>
       }
     </div>

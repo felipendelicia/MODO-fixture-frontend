@@ -42,4 +42,7 @@
     .player-scorer-container p:last-child{
         font-size: 1.6em;
     }
+    .playedmatch-modal-container{
+        margin: 2em 0;
+    }
 }
