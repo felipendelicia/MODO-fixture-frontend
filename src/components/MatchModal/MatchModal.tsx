@@ -1,6 +1,8 @@
 import React from 'react'
 
 import "./MatchModal.css"
+import "./PlayedMatchModal.css"
+import "./PlayedMatchVideoButton.css"
 
 import {teams} from "../../data/teams"
 import {players} from "../../data/players"
@@ -68,7 +70,7 @@ const MatchModal = (props:MatchModalPropsTypes) => {
   const filterGoalsForMatchId = goals.filter(goal=>{return goal.matchId===props.currentMatchModal?.id})
 
   const teamGoals = (teamId:String) => {
-    let teamPlayers = teams.find(team=>team.id===props.currentMatchModal?.localTeamId)!.player_ids
+    let teamPlayers = teams.find(team=>team.id===teamId)!.player_ids
     let scorersList = []
 
     for(let i:number = 0; i<teamPlayers?.length; i++ ){

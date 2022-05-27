@@ -1,0 +1,13 @@
+.playedmatch-modal-container{
+    margin: 1em 0;
+}
+
+.players-scorers-playedmatch-main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.players-scorers-playedmatch p{
+    font-family: Roboto-regular;
+    padding: 0.2em 0;
+}
