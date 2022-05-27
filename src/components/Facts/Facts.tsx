@@ -59,7 +59,7 @@ const MoreGoalsOneMatch = () => {
 
         const name = players.find((player: any) => player.id === candidate.id)?.name;
 
-        setFact({ title: "Más goles en un partido:", content: `${name} (${candidate.goals})` })
+        setFact({ title: "Más goles en un partido", content: `${name} (${candidate.goals})` })
     }, []);
 
     return (
