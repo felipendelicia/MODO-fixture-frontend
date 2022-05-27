@@ -12,31 +12,51 @@ interface MatchModalPropsTypes {
     urlVisitor: string; localTeamId: string; visitorTeamId: string; urlVideo: string|undefined} | undefined
 }
 
-const PlayedMatchVideoButton = () => {
+interface playedMatchModalProps {
+  localScorers: ({ id: string; name: string; number: string; picUrl: string; isCaptain: boolean; teamId: string; } | undefined)[];
+  visitorScorers: ({ id: string; name: string; number: string; picUrl: string; isCaptain: boolean; teamId: string; } | undefined)[]
+}
+
+const PlayedMatchVideoButton = (props:{videoURL:string}) => {
   return (
     <div className="playedmatchvideo-button">
-      Ver video
+      <a href={props.videoURL} target="_blank" rel="noreferrer">
+        Ver video
+      </a>
     </div>
   )
 }
 
-const PlayedOffMatch = () => {
+const PlayedOffMatch = (props:{localScore:number; visitorScore:number}) => {
   return (
     <div className="playedoffmatch-modal-container">
       <div className="playedoffmatch-title"> Penales </div>
-      <p className="playedoffmatch-scores">-</p>
+      <p className="playedoffmatch-scores">{props.localScore.toString() + " - " + props.visitorScore.toString()}</p>
     </div>
   )
 }
 
-const PlayedMatchModal = () => {
+const PlayedMatchModal = (props: playedMatchModalProps) => {
   return (
     <div className='playedmatch-modal-container'>
       <div className='players-scorers-playedmatch-main'>
         <div className="players-scorers-playedmatch">
-          1
+          {
+            props.localScorers.map((player, i)=>{
+              return(
+                <p key={i}> {player?.name} </p>
+              )
+            })
+          }
         </div>
         <div className="players-scorers-playedmatch">
+          {
+            props.visitorScorers.map((player, i)=>{
+              return(
+                <p key={i}> {player?.name} </p>
+              )
+            })
+          }
         </div>
       </div>
     </div>
@@ -105,21 +125,26 @@ const MatchModal = (props:MatchModalPropsTypes) => {
 
         {
           currentMatchModal.done === true &&
-          <PlayedMatchModal/>
+          <PlayedMatchModal 
+          localScorers={currentMatchModal.localScorers}
+          visitorScorers={currentMatchModal.visitorScorers}/>
         }
 
         {/* Agrego el resultado de los penales solo si el partido fue definido asi*/}
 
         {
           currentMatchModal.isPlayOff === true && currentMatchModal.done === true &&
-          <PlayedOffMatch/>
+          <PlayedOffMatch 
+          localScore={currentMatchModal.localScorePenalties as number} 
+          visitorScore={currentMatchModal.visitorScorePenalties as number}/>
         }
 
         {/* Agrego el button para ver el video del partido solo si lo hay */}
 
         {
           currentMatchModal.urlVideo !== undefined &&
-          <PlayedMatchVideoButton/>
+          <PlayedMatchVideoButton 
+          videoURL={currentMatchModal.urlVideo}/>
         }
 
     </div>
