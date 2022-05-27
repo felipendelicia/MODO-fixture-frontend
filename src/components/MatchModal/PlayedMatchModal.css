@@ -33,4 +33,13 @@
     .players-scorers-playedmatch p{
         font-size: 1.5em;
     }
+    .player-scorer-container p:first-child{
+        font-size: 2em;
+    }
+    .player-scorer-container img{
+        width: 4em;
+    }
+    .player-scorer-container p:last-child{
+        font-size: 1.6em;
+    }
 }
