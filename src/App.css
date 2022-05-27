@@ -11,6 +11,27 @@
     color: #4d4d4d;
 }
 
+.footer{
+    display: flex;
+    flex-direction: row-reverse;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    padding: 1em 2em;
+}
+
+.footer h4{
+    font-family:"FoundrySterling";
+    font-size: 1em;
+    color: #4d4d4d;
+}
+
+.footer div {
+    margin: 0 8em;
+}
+
+.footer a {
+    color: #25c2a0;
+}
+
 .header img{
     width: 4.3em;
     margin-right: 2em;
