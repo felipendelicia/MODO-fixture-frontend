@@ -44,3 +44,21 @@
     color: #1c1e21;
     margin-bottom: 1em;
 }
+
+@media (max-width: 1200px){
+    .modal-shield-and-name img{
+        width: 7em;
+    }
+    
+    .modal-shield-and-name p{
+        font-size: 2.5em;
+    }
+    
+    .score-match-modal{
+        font-size: 2em;
+    }
+    
+    .modal-date-time{
+        font-size: 1.6em;
+    }
+}

@@ -46,7 +46,10 @@ const PlayedMatchModal = (props: playedMatchModalProps) => {
           {
             props.localScorers.map((player, i)=>{
               return(
-                <p key={i}> {player?.name} </p>
+                <div className="player-scorer-container">
+                  <img src={player?.picUrl}/>
+                  <p>{player?.name}</p>
+                </div>
               )
             })
           }
@@ -55,7 +58,10 @@ const PlayedMatchModal = (props: playedMatchModalProps) => {
           {
             props.visitorScorers.map((player, i)=>{
               return(
-                <p key={i}> {player?.name} </p>
+                <div className="player-scorer-container">
+                  <img src={player?.picUrl}/>
+                  <p>{player?.name}</p>
+                </div>
               )
             })
           }

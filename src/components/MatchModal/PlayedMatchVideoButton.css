@@ -13,3 +13,9 @@
 .playedmatchvideo-button:hover{
     background-color: #1ea88a;
 }
+
+@media (max-width: 1200px){
+    .playedmatchvideo-button{
+        font-size: 2em;
+    }
+}

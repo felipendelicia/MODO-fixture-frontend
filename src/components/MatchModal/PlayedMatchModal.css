@@ -7,7 +7,24 @@
     justify-content: space-around;
 }
 
-.players-scorers-playedmatch p{
+.player-scorer-container img{
+    width: 2.5em;
+    border-radius: 999999px;
+    margin-right: 1em;
+}
+
+.player-scorer-container p{
     font-family: Roboto-regular;
+}
+
+.player-scorer-container{
+    display: flex;
+    align-items: center;
     padding: 0.2em 0;
+}
+
+@media (max-width: 1200px){
+    .players-scorers-playedmatch p{
+        font-size: 1.5em;
+    }
 }
