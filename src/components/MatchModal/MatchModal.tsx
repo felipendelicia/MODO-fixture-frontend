@@ -89,7 +89,6 @@ const MatchModal = (props:MatchModalPropsTypes) => {
         scorersList.push(playerName)
       }
     }
-
     return scorersList
   }
 

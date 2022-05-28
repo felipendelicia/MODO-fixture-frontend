@@ -110,27 +110,27 @@ export const matches = [
         id: '9',
         localId: '8',
         visitorId: '7',
-        localScore: 0,
-        visitorScore: 0,
+        localScore: 13,
+        visitorScore: 2,
         isPlayoff: false,
         localScorePenalties: 0,
         visitorScorePenalties: 0,
         date: '2022-05-27',
         time: '19:00',
-        done: false
+        done: true
     },
     {
         id: '10',
         localId: '1',
         visitorId: '6',
-        localScore: 0,
-        visitorScore: 0,
+        localScore: 5,
+        visitorScore: 8,
         isPlayoff: false,
         localScorePenalties: 0,
         visitorScorePenalties: 0,
         date: '2022-05-27',
         time: '20:00',
-        done: false
+        done: true
     },
     {
         id: '11',
