@@ -79,6 +79,7 @@ const MatchModal = (props:MatchModalPropsTypes) => {
 
   const teamGoals = (teamId:String) => {
     let teamPlayers = teams.find(team=>team.id===teamId)!.player_ids
+    console.log({teamPlayers})
     let scorersList = []
 
     for(let i:number = 0; i<teamPlayers?.length; i++ ){
@@ -89,7 +90,6 @@ const MatchModal = (props:MatchModalPropsTypes) => {
         scorersList.push(playerName)
       }
     }
-
     return scorersList
   }
 
