@@ -69,6 +69,7 @@
 
 .more-than-one{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     padding: 1em;
