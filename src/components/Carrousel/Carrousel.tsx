@@ -41,17 +41,19 @@ const Carrousel = () => {
         const currentMatches = matches.map((match)=>{
             const localTeam = teams.find(team=>team.id===match.localId)!;
             const visitorTeam = teams.find(team=>team.id===match.visitorId)!;
+            console.log({localTeam, visitorTeam})
             return({
                 id: match.id,
                 localTeamId: match.localId,
                 visitorTeamId: match.visitorId,
-                localName: localTeam.name,
-                visitorName: visitorTeam.name,
-                urlLocal: localTeam.url,
-                urlVisitor: visitorTeam.url,
+                localName: localTeam ? localTeam.name : match.localId,
+                visitorName: visitorTeam ? visitorTeam.name : match.visitorId,
+                urlLocal: localTeam ? localTeam.url : './assets/img/favicon.png',
+                urlVisitor: visitorTeam ? visitorTeam.url : './assets/img/favicon.png',
                 localScore: match.localScore,
                 visitorScore: match.visitorScore,
                 isPlayoff: match.isPlayoff,
+                stage: match.stage,
                 localScorePenalties: match.localScorePenalties,
                 visitorScorePenalties: match.visitorScorePenalties,
                 date: buildDate(match.date),
@@ -109,6 +111,7 @@ const Carrousel = () => {
         <div className="carrousel-date-time">
           <p>{currentMatch?.date}</p>
           <p>{currentMatch?.time}</p>
+          <p className="stage">{currentMatch?.stage}</p>
         </div>
         <div className="carrousel-buttons">
         </div>
@@ -140,6 +143,7 @@ interface Match {
   localScore: number
   visitorScore: number
   isPlayoff: boolean
+  stage: string
   localScorePenalties: number
   visitorScorePenalties: number
   date: string
