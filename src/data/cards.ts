@@ -90,4 +90,11 @@ export const cards = [
         matchId: "10",
         teamId: "6",
     },
+    {
+        id: "14",
+        playerId: "27",
+        type: 'yellow',
+        matchId: "11",
+        teamId: "2",
+    },
 ]
