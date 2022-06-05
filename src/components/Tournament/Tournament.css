@@ -1,0 +1,29 @@
+.tournament-template-container{
+    margin: 0 auto;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    width: 90%;
+    padding: 1em 2em;
+}
+
+.tournament-stage-container {
+    padding: 1.5em 0;
+}
+
+.match-cards-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.winner-img{
+    width: 7em;
+    padding-top: 1em;
+    border-top: 2px solid #25c2a0;
+}
+
+.tournament-stage-container:first-child p{
+    font-family: Roboto-bold;
+    color: #25c2a0;
+    text-align: center;
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+}
