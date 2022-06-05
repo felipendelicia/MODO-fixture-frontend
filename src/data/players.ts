@@ -550,8 +550,7 @@ export const players = [
         "picUrl": "https://ca.slack-edge.com/T01062DGEET-U02S6P942D7-00ea99b8363d-512",
         "isCaptain": false,
         "teamId": "8"
-    }
-    ,
+    },
     {
         "id": "70",
         "name": "Marian Ledesma",
@@ -583,5 +582,13 @@ export const players = [
         "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03FHF99K28-80f13c6ad8c9-512",
         "isCaptain": false,
         "teamId": "2"
+    },
+    {
+        "id": "74",
+        "name": "Maximiliano Colombo",
+        "number": "74",
+        "picUrl": "./assets/img/favicon.png",
+        "isCaptain": false,
+        "teamId": "1"
     },
 ]

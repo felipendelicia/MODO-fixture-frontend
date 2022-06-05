@@ -10,7 +10,7 @@ import {goals} from "../../data/goals"
 
 interface MatchModalPropsTypes {
   currentMatchModal: {id: string; localName: string; visitorName: string; localScore: number; visitorScore: number; isPlayoff: boolean
-    localScorePenalties: number; visitorScorePenalties: number; date: string; time: string; done: boolean; urlLocal: string
+    stage: string; localScorePenalties: number; visitorScorePenalties: number; date: string; time: string; done: boolean; urlLocal: string
     urlVisitor: string; localTeamId: string; visitorTeamId: string; urlVideo: string|undefined} | undefined
 }
 
@@ -89,7 +89,6 @@ const MatchModal = (props:MatchModalPropsTypes) => {
         scorersList.push(playerName)
       }
     }
-
     return scorersList
   }
 
@@ -120,6 +119,7 @@ const MatchModal = (props:MatchModalPropsTypes) => {
     localScore:             props.currentMatchModal?.localScore,
     visitorScore:           props.currentMatchModal?.visitorScore,
     isPlayOff:              props.currentMatchModal?.isPlayoff,
+    stage:                  props.currentMatchModal?.stage,
     localScorePenalties:    props.currentMatchModal?.localScorePenalties,
     visitorScorePenalties:  props.currentMatchModal?.visitorScorePenalties,
     date:                   props.currentMatchModal?.date,
@@ -148,6 +148,7 @@ const MatchModal = (props:MatchModalPropsTypes) => {
         <div className="modal-date-time">
           <p>{currentMatchModal?.date}</p>
           <p>{currentMatchModal?.time}</p>
+          <p className="stage">{currentMatchModal?.stage}</p>
         </div>
 
         {/* Agrego los jugadores que metieron gol solo si se jugó el partido */}
