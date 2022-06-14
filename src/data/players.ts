@@ -591,4 +591,12 @@ export const players = [
         "isCaptain": false,
         "teamId": "1"
     },
+    {
+        "id": "75",
+        "name": "Fran Amuchástegui",
+        "number": "74",
+        "picUrl": "./assets/img/favicon.png",
+        "isCaptain": false,
+        "teamId": "6"
+    },
 ]

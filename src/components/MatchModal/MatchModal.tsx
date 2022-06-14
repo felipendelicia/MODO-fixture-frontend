@@ -1,5 +1,3 @@
-import React from 'react'
-
 import "./MatchModal.css"
 import "./PlayedMatchModal.css"
 import "./PlayedMatchVideoButton.css"
@@ -25,15 +23,6 @@ const PlayedMatchVideoButton = (props:{videoURL:string}) => {
       <a href={props.videoURL} target="_blank" rel="noreferrer">
         Ver video
       </a>
-    </div>
-  )
-}
-
-const PlayedOffMatch = (props:{localScore:number; visitorScore:number}) => {
-  return (
-    <div className="playedoffmatch-modal-container">
-      <div className="playedoffmatch-title"> Penales </div>
-      <p className="playedoffmatch-scores">{props.localScore.toString() + " - " + props.visitorScore.toString()}</p>
     </div>
   )
 }
@@ -139,7 +128,14 @@ const MatchModal = (props:MatchModalPropsTypes) => {
             <img className="shield-image-modal" src={currentMatchModal.urlLocal} alt="shield"/>
             <p className="modal-team-name">{currentMatchModal.localName}</p>
           </div>
-          <p className="score-match-modal">{currentMatchModal.done? currentMatchModal.localScore + " - "+ currentMatchModal.visitorScore:"vs"}</p>
+          {
+            currentMatchModal?.localScore === currentMatchModal?.visitorScore && currentMatchModal?.done ? 
+            <div className="score-match-modal-with-penalties">
+            <p className="score-match-modal">{currentMatchModal?.done? currentMatchModal.localScore + " - "+ currentMatchModal.visitorScore:"vs"}</p>
+            <p className="score-match-modal-penalties">{currentMatchModal?.done? currentMatchModal.localScorePenalties + " - "+ currentMatchModal.visitorScorePenalties:"vs"}</p>
+            </div> :
+            <p className="score-match-modal">{currentMatchModal?.done? currentMatchModal.localScore + " - "+ currentMatchModal.visitorScore:"vs"}</p>
+          }
           <div className="modal-shield-and-name">
             <p className="modal-team-name">{currentMatchModal?.visitorName}</p>
             <img className="shield-image-modal" src={currentMatchModal?.urlVisitor} alt="shield"/>
@@ -158,15 +154,6 @@ const MatchModal = (props:MatchModalPropsTypes) => {
           <PlayedMatchModal 
           localScorers={currentMatchModal.localScorers}
           visitorScorers={currentMatchModal.visitorScorers}/>
-        }
-
-        {/* Agrego el resultado de los penales solo si el partido fue definido asi*/}
-
-        {
-          currentMatchModal.isPlayOff === true && currentMatchModal.done === true &&
-          <PlayedOffMatch 
-          localScore={currentMatchModal.localScorePenalties as number} 
-          visitorScore={currentMatchModal.visitorScorePenalties as number}/>
         }
 
         {/* Agrego el button para ver el video del partido solo si lo hay */}

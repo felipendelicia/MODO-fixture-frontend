@@ -35,6 +35,16 @@
     white-space: nowrap;
 }
 
+.score-match-modal-penalties{
+    font-family: Roboto-regular;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+.score-match-modal-with-penalties{
+    text-align: center;
+}
+
 .modal-date-time{
     display: grid;
     grid-template-columns: auto;

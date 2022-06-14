@@ -41,7 +41,6 @@ const Carrousel = () => {
         const currentMatches = matches.map((match)=>{
             const localTeam = teams.find(team=>team.id===match.localId)!;
             const visitorTeam = teams.find(team=>team.id===match.visitorId)!;
-            console.log({localTeam, visitorTeam})
             return({
                 id: match.id,
                 localTeamId: match.localId,
@@ -102,7 +101,14 @@ const Carrousel = () => {
             <img className="shield-image-carrousel" src={currentMatch?.urlLocal} alt="shield"/>
             <p className="carrousel-team-name">{currentMatch?.localName}</p>
           </div>
-          <p className="score-match">{currentMatch?.done? currentMatch.localScore + " - "+ currentMatch.visitorScore:"vs"}</p>
+          {
+            currentMatch?.localScore === currentMatch?.visitorScore && currentMatch?.done ? 
+            <div className="score-match-with-penalties">
+            <p className="score-match">{currentMatch?.done? currentMatch.localScore + " - "+ currentMatch.visitorScore:"vs"}</p>
+            <p className="score-match-penalties">{currentMatch?.done? currentMatch.localScorePenalties + " - "+ currentMatch.visitorScorePenalties:"vs"}</p>
+            </div> :
+            <p className="score-match">{currentMatch?.done? currentMatch.localScore + " - "+ currentMatch.visitorScore:"vs"}</p>
+          }
           <div className="carrousel-shield-and-name">
             <p className="carrousel-team-name">{currentMatch?.visitorName}</p>
             <img className="shield-image-carrousel" src={currentMatch?.urlVisitor} alt="shield"/>
