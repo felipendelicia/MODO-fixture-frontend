@@ -29,15 +29,6 @@ const PlayedMatchVideoButton = (props:{videoURL:string}) => {
   )
 }
 
-const PlayedOffMatch = (props:{localScore:number; visitorScore:number}) => {
-  return (
-    <div className="playedoffmatch-modal-container">
-      <div className="playedoffmatch-title"> Penales </div>
-      <p className="playedoffmatch-scores">{props.localScore.toString() + " - " + props.visitorScore.toString()}</p>
-    </div>
-  )
-}
-
 const PlayedMatchModal = (props: playedMatchModalProps) => {
   return (
     <div className='playedmatch-modal-container'>

@@ -1,22 +1,44 @@
+import React, { useState } from 'react';
 import "./Tournament.css";
 import "./MatchCard.css";
+import { matches } from "../../data/matches";
+import { teams } from "../../data/teams";
 
-const MatchCard = (props:{stage:string}) => {
+
+const MatchCard = (props:{stage:string, data:any, winner:string}) => {
+  const {stage, data, winner} = props;
+
+  const [ local ] = useState(teams.find(team => team.id === data.localId));
+  const [ visitor ] = useState(teams.find(team => team.id === data.visitorId));
+
   return (
     <div className="match-card-container-main">
-      <p>{props.stage}</p>
+      <p>{stage}</p>
       <div className="match-card-container">
-        <img src="./assets/img/favicon.png" alt="shield" />
+        <div className="card-container">
+          <img className={`${winner==='local'?'winner': ''}`} src={local?.url} alt="shield" />
+          <p>{local?.name}</p>
+        </div>
         <p>vs</p>
-        <img src="./assets/img/favicon.png" alt="shield" />
+        <div className="card-container">
+          <img className={`${winner==='visitor'?'winner': ''}`} src={visitor?.url} alt="shield" />
+          <p>{visitor?.name}</p>
+        </div>
       </div>
     </div>
   );
 };
 
 const Tournament = () => {
+  const [ matchSemA ] = useState( matches.find(match => match.stage === 'Semifinal A'));
+  const [ matchSemB ] = useState( matches.find(match => match.stage === 'Semifinal B'));
+  const [ matchFinal ] = useState( matches.find(match => match.stage === 'Final'));
+
   return (
     <div className="tournament-template-container">
+      <div className="toggle-msg">
+        <p className="show">Ver fase de grupos</p>
+      </div>  
       <div className="tournament-container">
         <div className="tournament-stage-container">
             <p>🎉🎊¡Ganador!🎊🎉</p>
@@ -30,13 +52,13 @@ const Tournament = () => {
         </div>
         <div className="tournament-stage-container">
           <div className="match-cards-container">
-            <MatchCard stage="Final"/>
+            <MatchCard stage="Final" data={matchFinal} winner=""/>
           </div>
         </div>
         <div className="tournament-stage-container">
           <div className="match-cards-container">
-            <MatchCard stage="Semifinal A"/>
-            <MatchCard stage="Semifinal B"/>
+            <MatchCard stage="Semifinal A" data={matchSemA} winner="local"/>
+            <MatchCard stage="Semifinal B" data={matchSemB} winner="visitor"/>
           </div>
         </div>
       </div>

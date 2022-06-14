@@ -27,3 +27,27 @@
     font-size: 1.2em;
     padding-bottom: 0.5em;
 }
+
+.winner {
+    border: 5px solid green;
+    border-radius: 50%;
+}
+
+.card-container {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.toggle-msg{
+    font-family: Roboto-bold;
+    color: #008ae0;
+    text-align: right;
+    font-size: 0.8em;
+    padding-bottom: 0.5em;
+}
+
+.show{
+    position: relative
+}

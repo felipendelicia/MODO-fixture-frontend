@@ -11,7 +11,7 @@ const Fixture = () => {
   const [teamsList, setTeamsList] = useState<any>([])
 
   useEffect(() => {
-    const filteredGoals = goals.filter(goal => parseInt(goal.matchId)<13);
+    const filteredGoals = goals.filter(goal => parseInt(goal.matchId) < 13);
     let currentTeams = teams.map((team) => {
       return ({
         id: team.id,
@@ -60,23 +60,27 @@ const Fixture = () => {
   }, [])
 
   return (
-    <div className="fixture-container">
-      <div className="fixture-group-container">
-        <h1 className="group-title">Grupo A</h1>
-        <table className="table-container">
-          <tr className="table-categories">
-            <td>Equipo</td>
-            <td>PJ</td>
-            <td>G</td>
-            <td>E</td>
-            <td>P</td>
-            <td>GF</td>
-            <td>GE</td>
-            <td>DG</td>
-            <td>PTS</td>
-          </tr>
-          {teamsList.filter((team:any)=>team.group==="a").map((team: any, i: number) => {
-            const classifiedClass = i < 2 ? "classified" : "unclassified";
+    <>
+      <div className="toggle-msg">
+        <p className="show">Ver play offs</p>
+      </div>
+      <div className="fixture-container">
+        <div className="fixture-group-container">
+          <h1 className="group-title">Grupo A</h1>
+          <table className="table-container">
+            <tr className="table-categories">
+              <td>Equipo</td>
+              <td>PJ</td>
+              <td>G</td>
+              <td>E</td>
+              <td>P</td>
+              <td>GF</td>
+              <td>GE</td>
+              <td>DG</td>
+              <td>PTS</td>
+            </tr>
+            {teamsList.filter((team: any) => team.group === "a").map((team: any, i: number) => {
+              const classifiedClass = i < 2 ? "classified" : "unclassified";
               return (
                 <tr key={i}>
                   <td className={`table-team-names ${classifiedClass}`}><img alt='shield' src={team.url} className='shield-image-fixture' /><span>{team.name}</span></td>
@@ -90,25 +94,25 @@ const Fixture = () => {
                   <td className="td-points">{team.points}</td>
                 </tr>
               )
-          })}
-        </table>
-      </div>
-      <div className="fixture-group-container">
-        <h1 className="group-title">Grupo B</h1>
-        <table className="table-container">
-          <tr className="table-categories">
-            <td>Equipo</td>
-            <td>PJ</td>
-            <td>G</td>
-            <td>E</td>
-            <td>P</td>
-            <td>GF</td>
-            <td>GE</td>
-            <td>DG</td>
-            <td>PTS</td>
-          </tr>
-          {teamsList.filter((team:any)=>team.group==="b").map((team: any, i: number) => {
-            const classifiedClass = i < 2 ? "classified" : "unclassified";
+            })}
+          </table>
+        </div>
+        <div className="fixture-group-container">
+          <h1 className="group-title">Grupo B</h1>
+          <table className="table-container">
+            <tr className="table-categories">
+              <td>Equipo</td>
+              <td>PJ</td>
+              <td>G</td>
+              <td>E</td>
+              <td>P</td>
+              <td>GF</td>
+              <td>GE</td>
+              <td>DG</td>
+              <td>PTS</td>
+            </tr>
+            {teamsList.filter((team: any) => team.group === "b").map((team: any, i: number) => {
+              const classifiedClass = i < 2 ? "classified" : "unclassified";
               return (
                 <tr key={i}>
                   <td className={`table-team-names ${classifiedClass}`}><img alt='shield' src={team.url} className='shield-image-fixture' /><span>{team.name}</span></td>
@@ -122,10 +126,12 @@ const Fixture = () => {
                   <td className="td-points">{team.points}</td>
                 </tr>
               )
-          })}
-        </table>
+            })}
+          </table>
+        </div>
       </div>
-    </div>
+    </>
+
   )
 }
 
