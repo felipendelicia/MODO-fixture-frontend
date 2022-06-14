@@ -41,7 +41,6 @@ const Carrousel = () => {
         const currentMatches = matches.map((match)=>{
             const localTeam = teams.find(team=>team.id===match.localId)!;
             const visitorTeam = teams.find(team=>team.id===match.visitorId)!;
-            console.log({localTeam, visitorTeam})
             return({
                 id: match.id,
                 localTeamId: match.localId,

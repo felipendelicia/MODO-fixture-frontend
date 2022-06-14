@@ -1,5 +1,3 @@
-import React from 'react'
-
 import "./MatchModal.css"
 import "./PlayedMatchModal.css"
 import "./PlayedMatchVideoButton.css"
@@ -25,15 +23,6 @@ const PlayedMatchVideoButton = (props:{videoURL:string}) => {
       <a href={props.videoURL} target="_blank" rel="noreferrer">
         Ver video
       </a>
-    </div>
-  )
-}
-
-const PlayedOffMatch = (props:{localScore:number; visitorScore:number}) => {
-  return (
-    <div className="playedoffmatch-modal-container">
-      <div className="playedoffmatch-title"> Penales </div>
-      <p className="playedoffmatch-scores">{props.localScore.toString() + " - " + props.visitorScore.toString()}</p>
     </div>
   )
 }
