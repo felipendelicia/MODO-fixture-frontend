@@ -57,7 +57,7 @@ export const teams = [
     {
         id: '6',
         name: 'ASAP',
-        player_ids: ['35','36','37','38','39','40','41','42'],
+        player_ids: ['35','36','37','38','39','40','41','42','75'],
         points: 9,
         wins: 3,
         draws: 0,

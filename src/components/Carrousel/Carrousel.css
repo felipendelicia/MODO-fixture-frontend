@@ -63,10 +63,20 @@
     background-color: #1ea88a;
 }
 
+.score-match-with-penalties {
+    text-align: center;
+}
+
 .score-match{
     font-family: Roboto-regular;
     font-size: 1.1em;
     white-space: nowrap;
+}
+
+.score-match-penalties {
+    font-family: Roboto-regular;
+    font-size: 0.8em;
+    white-space: nowrap; 
 }
 
 .carrousel-see-more-button{
@@ -107,6 +117,9 @@
     }
     .score-match{
         font-size: 2em;
+    }
+    .score-match-penalties{
+        font-size: 1.5em;
     }
     .carrousel-container{
         margin: 3em 0em;

@@ -11,6 +11,7 @@ const Fixture = () => {
   const [teamsList, setTeamsList] = useState<any>([])
 
   useEffect(() => {
+    const filteredGoals = goals.filter(goal => parseInt(goal.matchId)<13);
     let currentTeams = teams.map((team) => {
       return ({
         id: team.id,
@@ -23,10 +24,10 @@ const Fixture = () => {
         playedMatches: matches.filter((match) => {
           return match.done === true && (match.localId === team.id || match.visitorId === team.id)
         }).length,
-        gf: goals.filter((goal) => {
+        gf: filteredGoals.filter((goal) => {
           return goal.teamId === team.id
         }).length,
-        gc: goals.filter((goal) => {
+        gc: filteredGoals.filter((goal) => {
           return goal.teamReceivedId === team.id
         }).length,
         url: team.url
