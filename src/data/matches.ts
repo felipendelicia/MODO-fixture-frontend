@@ -202,28 +202,28 @@ export const matches = [
         id: '15',
         localId: '4',
         visitorId: '6',
-        localScore: 0,
-        visitorScore: 0,
+        localScore: 8,
+        visitorScore: 6,
         isPlayoff: true,
         stage: '3er puesto',
         localScorePenalties: 0,
         visitorScorePenalties: 0,
         date: '2022-06-24',
         time: '19:00',
-        done: false
+        done: true
     },
     {
         id: '16',
         localId: '8',
         visitorId: '3',
-        localScore: 0,
-        visitorScore: 0,
+        localScore: 9,
+        visitorScore: 5,
         isPlayoff: true,
         stage: 'Final',
         localScorePenalties: 0,
         visitorScorePenalties: 0,
         date: '2022-06-24',
         time: '20:00',
-        done: false
+        done: true
     },
 ]

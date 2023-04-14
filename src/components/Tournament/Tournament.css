@@ -51,3 +51,9 @@
 .show{
     position: relative
 }
+
+.final-winner {
+    width: 7em;
+    border: 5px solid #d8cd2c;
+    border-radius: 50%;
+}

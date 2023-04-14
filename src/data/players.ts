@@ -589,7 +589,7 @@ export const players = [
         "number": "74",
         "picUrl": "./assets/img/favicon.png",
         "isCaptain": false,
-        "teamId": "1"
+        "teamId": "6"
     },
     {
         "id": "75",
