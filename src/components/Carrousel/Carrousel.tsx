@@ -62,7 +62,11 @@ const Carrousel = () => {
             })
         })
         setMatchesList(currentMatches)
-        setCurrentMatch(currentMatches.find((match)=>{return match.done===false}))
+        if (!currentMatches.find((match)=>{return match.done===false})) {
+          setCurrentMatch(currentMatches[currentMatches.length-1]);
+        } else {
+          setCurrentMatch(currentMatches.find((match)=>{return match.done===false}));
+        }
     },[])
 
     const nextMatch = () => {

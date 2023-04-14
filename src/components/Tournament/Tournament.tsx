@@ -43,16 +43,15 @@ const Tournament = () => {
         <div className="tournament-stage-container">
             <p>🎉🎊¡Ganador!🎊🎉</p>
           <div className="match-cards-container">
-            <img
-              src="./assets/img/favicon.png"
-              alt="shield"
-              className="winner-img"
-            />
+            <div className="card-container">
+              <img className={`final-winner`} src={teams[7].url} alt="shield" />
+              <p>{teams[7].name}</p>
+            </div>
           </div>
         </div>
         <div className="tournament-stage-container">
           <div className="match-cards-container">
-            <MatchCard stage="Final" data={matchFinal} winner=""/>
+            <MatchCard stage="Final" data={matchFinal} winner="local"/>
           </div>
         </div>
         <div className="tournament-stage-container">

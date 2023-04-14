@@ -97,4 +97,18 @@ export const cards = [
         matchId: "11",
         teamId: "2",
     },
+    {
+        id: "15",
+        playerId: "36",
+        type: 'yellow',
+        matchId: "15",
+        teamId: "6",
+    },
+    {
+        id: "16",
+        playerId: "34",
+        type: 'yellow',
+        matchId: "15",
+        teamId: "3",
+    },
 ]
