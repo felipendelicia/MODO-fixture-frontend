@@ -7,6 +7,7 @@ import "./RankingStyles.css"
 import { players } from "../../data/players"
 import { goals } from "../../data/goals"
 import { teams } from "../../data/teams"
+import { HomeProps } from '../../views/Home'
 
 const PIC_BESTCORERS_CLASS: { [key: number]: string } = {
     0: "gold-border",
@@ -53,14 +54,14 @@ const Card = (props: CardProps) => {
     )
 }
 
-const BestScorers = () => {
+const BestScorers = (props:HomeProps) => {
     const [playersList, setPlayersList] = useState<IPlayer[][]>([]);
     const [showAll, setShowAll] = useState<boolean>(false);
     const [ToggleShowText, setToggleShowText] = useState<SHOW_ALL_BUTTON_TEXT_OPTIONS>(SHOW_ALL_BUTTON_TEXT_OPTIONS.SHOW_MORE);
 
     useEffect(() => {
-        const allPlayers = players.map((player) => {
-            const teamObj = teams.find(team => team.id === player.teamId)!;
+        const allPlayers = players[parseInt(props.tournamentId)-1].map((player) => {
+            const teamObj = teams[parseInt(props.tournamentId)-1].find(team => team.id === player.teamId)!;
             return (
                 {
                     id: player.id,
@@ -68,7 +69,7 @@ const BestScorers = () => {
                     picUrl: player.picUrl,
                     teamName: teamObj.name,
                     teamLogo: teamObj.url,
-                    playerGoals: goals.filter(goal => { return goal.playerGoalId === player.id }).length
+                    playerGoals: goals[parseInt(props.tournamentId)-1].filter(goal => { return goal.playerGoalId === player.id }).length
                 }
             )
         })

@@ -5,14 +5,14 @@ import { teams } from "../../data/teams"
 import { goals } from "../../data/goals"
 
 import "./Fixture.css"
+import { HomeProps } from '../../views/Home'
 
-const Fixture = () => {
-
+const Fixture = (props: HomeProps) => {
   const [teamsList, setTeamsList] = useState<any>([])
 
   useEffect(() => {
-    const filteredGoals = goals.filter(goal => parseInt(goal.matchId) < 13);
-    let currentTeams = teams.map((team) => {
+    const filteredGoals = goals[parseInt(props.tournamentId)-1].filter(goal => parseInt(goal.matchId) < 13);
+    let currentTeams = teams[parseInt(props.tournamentId)-1].map((team) => {
       return ({
         id: team.id,
         name: team.name,
@@ -21,7 +21,7 @@ const Fixture = () => {
         defeats: team.defeats,
         draws: team.draws,
         group: team.group,
-        playedMatches: matches.filter((match) => {
+        playedMatches: matches[parseInt(props.tournamentId)-1].filter((match) => {
           return match.done === true && (match.localId === team.id || match.visitorId === team.id)
         }).length,
         gf: filteredGoals.filter((goal) => {

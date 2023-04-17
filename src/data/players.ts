@@ -1,5 +1,5 @@
 export const players = [
-    {
+    [    {
         "id": "1",
         "name": "Luqui",
         "number": "15",
@@ -598,5 +598,392 @@ export const players = [
         "picUrl": "./assets/img/favicon.png",
         "isCaptain": false,
         "teamId": "6"
-    },
+    }
+    ],
+    [
+        {
+            "id": "1",
+            "name": "Lourdes Gallardo",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "1"
+        },
+        {
+            "id": "2",
+            "name": "Tomas Albert",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "1"
+        },
+        {
+            "id": "3",
+            "name": "Alejo Casal",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "1"
+        },
+        {
+            "id": "4",
+            "name": "Martin Cerdeiras",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "1"
+        },
+        {
+            "id": "5",
+            "name": "Sebastian Cardozo",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "1"
+        },
+        {
+            "id": "6",
+            "name": "Damian Garcia",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "1"
+        },
+        {
+            "id": "7",
+            "name": "Hernan Fuentes Araujo",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "1"
+        },
+        {
+            "id": "8",
+            "name": "Camila Mella",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "1"
+        },
+        {
+            "id": "9",
+            "name": "Sofia Frumboli",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "1"
+        },
+        {
+            "id": "10",
+            "name": "Cristian Rivas",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "1"
+        },
+        {
+            "id": "11",
+            "name": "Guido Mazzadi",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "1"
+        },
+        {
+            "id": "12",
+            "name": "Danilo Herms",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "2"
+        },
+        {
+            "id": "13",
+            "name": "Federico Barallobre",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "2"
+        },
+        {
+            "id": "14",
+            "name": "Dave Favretto",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "2"
+        },
+        {
+            "id": "15",
+            "name": "Manuel Taibi",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "2"
+        },
+        {
+            "id": "16",
+            "name": "Federico Aragón",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "2"
+        },
+        {
+            "id": "17",
+            "name": "Milagros Barzezevski",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "2"
+        },
+        {
+            "id": "18",
+            "name": "Julieta Gregnoli",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "2"
+        },
+        {
+            "id": "19",
+            "name": "Milena Juarez",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "2"
+        },
+        {
+            "id": "20",
+            "name": "Fernando García",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "2"
+        },
+        {
+            "id": "21",
+            "name": "Matias Arancibia",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "2"
+        },
+        {
+            "id": "22",
+            "name": "Rocío Quiroga",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "3"
+        },
+        {
+            "id": "23",
+            "name": "Barbie Alvarado",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "3"
+        },
+        {
+            "id": "24",
+            "name": "Agustín Tilli",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "3"
+        },
+        {
+            "id": "25",
+            "name": "Nano",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "3"
+        },
+        {
+            "id": "26",
+            "name": "Lucas Patallo",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "3"
+        },
+        {
+            "id": "27",
+            "name": "Matías Palmero",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "3"
+        },
+        {
+            "id": "28",
+            "name": "Fran Robredo",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "3"
+        },
+        {
+            "id": "29",
+            "name": "Eliana Sotelo",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "3"
+        },
+        {
+            "id": "30",
+            "name": "Marcos Díaz Carmona",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "3"
+        },
+        {
+            "id": "31",
+            "name": "Ivan Arinovich",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "3"
+        },
+        {
+            "id": "32",
+            "name": "Belen Godoy",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "4"
+        },
+        {
+            "id": "33",
+            "name": "Nahuel Calello",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "4"
+        },
+        {
+            "id": "34",
+            "name": "Franco Gaito",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "4"
+        },
+        {
+            "id": "35",
+            "name": "Jonathan Almeida",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "4"
+        },
+        {
+            "id": "36",
+            "name": "Facundo Terz",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "4"
+        },
+        {
+            "id": "37",
+            "name": "Lean Colisko",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "4"
+        },
+        {
+            "id": "38",
+            "name": "Agustin Kearney",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "4"
+        },
+        {
+            "id": "39",
+            "name": "Enrique Sanchez",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "4"
+        },
+        {
+            "id": "40",
+            "name": "Carolina del Carmen",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "4"
+        },
+        {
+            "id": "41",
+            "name": "Hernan Guebel",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "4"
+        },
+        {
+            "id": "42",
+            "name": "Victoria Gomez Roset",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "4"
+        },
+        {
+            "id": "43",
+            "name": "Julian Rosenfeld",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "5"
+        },
+        {
+            "id": "44",
+            "name": "Shima",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "5"
+        },
+        {
+            "id": "45",
+            "name": "Vlady",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "5"
+        },
+        {
+            "id": "46",
+            "name": "Martin Kraitman",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "5"
+        },
+        {
+            "id": "47",
+            "name": "Nicolas Bugallo",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "5"
+        },
+        {
+            "id": "48",
+            "name": "Ignacio Reyna",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "5"
+        },
+        {
+            "id": "49",
+            "name": "Celeste Brizzi",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "5"
+        },
+        {
+            "id": "50",
+            "name": "Nicolas Bugallo",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "5"
+        },
+        {
+            "id": "51",
+            "name": "Martin Kuszczak",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "5"
+        },
+        {
+            "id": "52",
+            "name": "Mic Martin",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "5"
+        },
+        {
+            "id": "53",
+            "name": "Santiago Muller",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "6"
+        },
+        {
+            "id": "54",
+            "name": "Lucas Zanetti",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "6"
+        },
+        {
+            "id": "55",
+            "name": "Belen Gonzalez Lojk",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "6"
+        },
+        {
+            "id": "56",
+            "name": "Mateo Silguero",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "6"
+        },
+        {
+            "id": "57",
+            "name": "Daniel Huanca Piza",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "6"
+        },
+        {
+            "id": "58",
+            "name": "Fer Mac Dougall",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "6"
+        },
+        {
+            "id": "59",
+            "name": "Josefina Rossi",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "6"
+        },
+        {
+            "id": "60",
+            "name": "Julieta Rehak",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "6"
+        },
+        {
+            "id": "61",
+            "name": "Fernando Gentili",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "6"
+        },
+        {
+            "id": "62",
+            "name": "Gonzalo Berro",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "6"
+        },
+        {
+            "id": "63",
+            "name": "Pehue",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "6"
+        },
+        {
+            "id": "64",
+            "name": "Nicolas Gomes",
+            "picUrl": "./assets/img/favicon.png",
+            "teamId": "5"
+        },
+    ]
 ]

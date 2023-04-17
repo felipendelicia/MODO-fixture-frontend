@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import {matches} from "../../data/matches"
 import {teams} from "../../data/teams"
+import { HomeProps } from '../../views/Home'
 import MatchModal from '../MatchModal/MatchModal'
 import Modal from '../Modal/Modal'
 
@@ -31,16 +32,16 @@ const buildDate = (date: string): string => {
   return `${day} de ${MONTHS_MAP[month]} de ${year}`
 }
 
-const Carrousel = () => {
+const Carrousel = (props:HomeProps) => {
 
     const [matchesList, setMatchesList] = useState<Match[]>([])
     const [currentMatch, setCurrentMatch] = useState<Match | undefined>()
     const [toggleShowMatch, setToggleShowMatch] = useState<boolean>(false)
     
     useEffect(()=>{
-        const currentMatches = matches.map((match)=>{
-            const localTeam = teams.find(team=>team.id===match.localId)!;
-            const visitorTeam = teams.find(team=>team.id===match.visitorId)!;
+        const currentMatches = matches[parseInt(props.tournamentId)-1].map((match)=>{
+            const localTeam = teams[parseInt(props.tournamentId)-1].find(team=>team.id===match.localId)!;
+            const visitorTeam = teams[parseInt(props.tournamentId)-1].find(team=>team.id===match.visitorId)!;
             return({
                 id: match.id,
                 localTeamId: match.localId,
@@ -95,7 +96,7 @@ const Carrousel = () => {
       }
     }
 
-    const currentMatchModal = <MatchModal currentMatchModal={currentMatch}/>
+    const currentMatchModal = <MatchModal currentMatchModal={currentMatch} tournamentId={props.tournamentId}/>
 
   return (
     <div className="carrousel-container">

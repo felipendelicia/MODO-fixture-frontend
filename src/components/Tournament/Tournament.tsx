@@ -3,13 +3,14 @@ import "./Tournament.css";
 import "./MatchCard.css";
 import { matches } from "../../data/matches";
 import { teams } from "../../data/teams";
+import { HomeProps } from '../../views/Home';
 
 
-const MatchCard = (props:{stage:string, data:any, winner:string}) => {
-  const {stage, data, winner} = props;
+const MatchCard = (props:{stage:string, data:any, winner:string, tournamentId: string}) => {
+  const {stage, data, winner, tournamentId} = props;
 
-  const [ local ] = useState(teams.find(team => team.id === data.localId));
-  const [ visitor ] = useState(teams.find(team => team.id === data.visitorId));
+  const [ local ] = useState(teams[parseInt(tournamentId)-1].find(team => team.id === data.localId));
+  const [ visitor ] = useState(teams[parseInt(tournamentId)-1].find(team => team.id === data.visitorId));
 
   return (
     <div className="match-card-container-main">
@@ -29,10 +30,10 @@ const MatchCard = (props:{stage:string, data:any, winner:string}) => {
   );
 };
 
-const Tournament = () => {
-  const [ matchSemA ] = useState( matches.find(match => match.stage === 'Semifinal A'));
-  const [ matchSemB ] = useState( matches.find(match => match.stage === 'Semifinal B'));
-  const [ matchFinal ] = useState( matches.find(match => match.stage === 'Final'));
+const Tournament = (props: HomeProps) => {
+  const [ matchSemA ] = useState( matches[parseInt(props.tournamentId)-1].find(match => match.stage === 'Semifinal A'));
+  const [ matchSemB ] = useState( matches[parseInt(props.tournamentId)-1].find(match => match.stage === 'Semifinal B'));
+  const [ matchFinal ] = useState( matches[parseInt(props.tournamentId)-1].find(match => match.stage === 'Final'));
 
   return (
     <div className="tournament-template-container">
@@ -44,20 +45,20 @@ const Tournament = () => {
             <p>🎉🎊¡Ganador!🎊🎉</p>
           <div className="match-cards-container">
             <div className="card-container">
-              <img className={`final-winner`} src={teams[7].url} alt="shield" />
-              <p>{teams[7].name}</p>
+              <img className={`final-winner`} src={teams[parseInt(props.tournamentId)-1][7].url} alt="shield" />
+              <p>{teams[parseInt(props.tournamentId)-1][7].name}</p>
             </div>
           </div>
         </div>
         <div className="tournament-stage-container">
           <div className="match-cards-container">
-            <MatchCard stage="Final" data={matchFinal} winner="local"/>
+            <MatchCard stage="Final" data={matchFinal} winner="local" tournamentId={props.tournamentId}/>
           </div>
         </div>
         <div className="tournament-stage-container">
           <div className="match-cards-container">
-            <MatchCard stage="Semifinal A" data={matchSemA} winner="local"/>
-            <MatchCard stage="Semifinal B" data={matchSemB} winner="visitor"/>
+            <MatchCard stage="Semifinal A" data={matchSemA} winner="local" tournamentId={props.tournamentId}/>
+            <MatchCard stage="Semifinal B" data={matchSemB} winner="visitor" tournamentId={props.tournamentId}/>
           </div>
         </div>
       </div>

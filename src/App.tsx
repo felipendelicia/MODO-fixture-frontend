@@ -2,11 +2,11 @@ import {Route, Routes, BrowserRouter} from "react-router-dom"
 
 import "./App.css"
 
-import { teams } from "./data/teams";
+//import { teams } from "./data/teams";
 
 import Home from "./views/Home";
-import Team from "./views/Team";
-import Facts from "./components/Facts/Facts";
+//mport Team from "./views/Team";
+//import Facts from "./components/Facts/Facts";
 
 function App() {
   return (
@@ -17,19 +17,13 @@ function App() {
           <h1>Torneo de fútbol</h1>
         </div>
         <div className="header-facts">
-          <Facts/>
+          {/* <Facts/> */}
         </div>
       </div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          {
-            teams.map((team, index)=>{
-              return(
-                <Route path={"/team/" + team.id} element={<Team teamObject={team}/>} key={index}/>
-              )
-            })
-          }
+          <Route path="/" element={<Home tournamentId="2"/>}/>
+          <Route path="/2022" element={<Home tournamentId="1"/>}/>
         </Routes>
       </BrowserRouter>
       <div className="footer">
