@@ -5,7 +5,7 @@ import "./App.css"
 //import { teams } from "./data/teams";
 
 import Home from "./views/Home";
-//mport Team from "./views/Team";
+//import Team from "./views/Team";
 //import Facts from "./components/Facts/Facts";
 
 function App() {

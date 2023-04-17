@@ -7,7 +7,6 @@ import "./RankingStyles.css"
 import { players } from "../../data/players"
 import { goals } from "../../data/goals"
 import { teams } from "../../data/teams"
-import { HomeProps } from '../../views/Home'
 
 const PIC_BESTCORERS_CLASS: { [key: number]: string } = {
     0: "gold-border",
@@ -54,7 +53,7 @@ const Card = (props: CardProps) => {
     )
 }
 
-const BestScorers = (props:HomeProps) => {
+const BestScorers = (props:any) => {
     const [playersList, setPlayersList] = useState<IPlayer[][]>([]);
     const [showAll, setShowAll] = useState<boolean>(false);
     const [ToggleShowText, setToggleShowText] = useState<SHOW_ALL_BUTTON_TEXT_OPTIONS>(SHOW_ALL_BUTTON_TEXT_OPTIONS.SHOW_MORE);
@@ -98,7 +97,7 @@ const BestScorers = (props:HomeProps) => {
         } else {
             setPlayersList(groupedPlayers.slice(0, 3))
         }
-    }, [showAll])
+    }, [showAll, props.tournamentId])
 
     const ToggleShow = () => {
         setShowAll(!showAll)

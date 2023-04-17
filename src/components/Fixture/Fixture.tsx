@@ -5,9 +5,8 @@ import { teams } from "../../data/teams"
 import { goals } from "../../data/goals"
 
 import "./Fixture.css"
-import { HomeProps } from '../../views/Home'
 
-const Fixture = (props: HomeProps) => {
+const Fixture = (props: any) => {
   const [teamsList, setTeamsList] = useState<any>([])
 
   useEffect(() => {
@@ -57,7 +56,7 @@ const Fixture = (props: HomeProps) => {
     });
 
     setTeamsList(currentTeams)
-  }, [])
+  }, [props.tournamentId])
 
   return (
     <>

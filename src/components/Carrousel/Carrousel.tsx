@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 import {matches} from "../../data/matches"
 import {teams} from "../../data/teams"
-import { HomeProps } from '../../views/Home'
 import MatchModal from '../MatchModal/MatchModal'
 import Modal from '../Modal/Modal'
 
@@ -32,7 +31,7 @@ const buildDate = (date: string): string => {
   return `${day} de ${MONTHS_MAP[month]} de ${year}`
 }
 
-const Carrousel = (props:HomeProps) => {
+const Carrousel = (props:any) => {
 
     const [matchesList, setMatchesList] = useState<Match[]>([])
     const [currentMatch, setCurrentMatch] = useState<Match | undefined>()
@@ -68,7 +67,7 @@ const Carrousel = (props:HomeProps) => {
         } else {
           setCurrentMatch(currentMatches.find((match)=>{return match.done===false}));
         }
-    },[])
+    },[props.tournamentId])
 
     const nextMatch = () => {
       let currentMatchIdNumber = parseInt(currentMatch?.id as string)
