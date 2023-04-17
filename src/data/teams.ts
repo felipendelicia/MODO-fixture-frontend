@@ -143,7 +143,7 @@ export const teams = [
             draws: 0,
             defeats: 0,
             group:"b",
-            url: "https://files.slack.com/files-pri/T01062DGEET-F05351CABU6/raspar_y_ganar.png"
+            url: "https://user-images.githubusercontent.com/55720621/232539441-42759871-561d-4bc2-952e-bb95a91a69c9.png"
         },
         {
             id: '6',
