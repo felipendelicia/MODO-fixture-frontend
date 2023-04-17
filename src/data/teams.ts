@@ -103,7 +103,7 @@ export const teams = [
         },
         {
             id: '2',
-            name: 'Equipo 2',
+            name: 'Mové tu QQ',
             player_ids: ['12','13','14','15','16','17','18','19','20','21'],
             points: 3,
             wins: 1,
@@ -114,7 +114,7 @@ export const teams = [
         },
         {
             id: '3',
-            name: 'Equipo 3',
+            name: 'Deportivo MODÓN',
             player_ids: ['22','23','24','25','26','27','28','29','30','31'],
             points: 0,
             wins: 0,
@@ -136,14 +136,14 @@ export const teams = [
         },
         {
             id: '5',
-            name: 'Equipo 5',
+            name: 'Raspar y Ganar',
             player_ids: ['43','44','45','46','47','48','49','50','51','52','64'],
             points: 3,
             wins: 1,
             draws: 0,
             defeats: 0,
             group:"b",
-            url: "https://user-images.githubusercontent.com/55720621/232337175-7442e911-b1e0-46af-b5c2-6ebcd4103520.png"
+            url: "https://user-images.githubusercontent.com/55720621/232539441-42759871-561d-4bc2-952e-bb95a91a69c9.png"
         },
         {
             id: '6',
