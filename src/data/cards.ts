@@ -1,5 +1,5 @@
 export const cards = [
-    {
+    [{
         id: "1",
         playerId: "41",
         type: 'yellow',
@@ -110,5 +110,6 @@ export const cards = [
         type: 'yellow',
         matchId: "15",
         teamId: "3",
-    },
+    }],
+    []
 ]

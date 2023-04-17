@@ -4,7 +4,11 @@ import Fixture from '../components/Fixture/Fixture'
 import BestScorers from '../components/BestScorers/BestScorers'
 import Tournament from '../components/Tournament/Tournament'
 
-const Hero = () => {
+export interface HomeProps {
+  tournamentId: string,
+}
+
+const Hero = (props:HomeProps) => {
   const [showFixture, setShowFixture] = React.useState(false)
   const [showTournament, setTournament] = React.useState(true)
 
@@ -13,22 +17,30 @@ const Hero = () => {
     setTournament(!showTournament)
   }
 
-  return <>
-    <div onClick={toggle} className={showTournament? '' : 'hide'}>
-      <Tournament  />
-    </div>
-    <div onClick={toggle} className={showFixture? '' : 'hide'}>
-      <Fixture  />
-    </div>
-  </>
+  if (props.tournamentId !== '2') {
+    return <>
+      <div onClick={toggle} className={showTournament? '' : 'hide'}>
+        <Tournament tournamentId={props.tournamentId} />
+      </div>
+      <div onClick={toggle} className={showFixture? '' : 'hide'}>
+        <Fixture tournamentId={props.tournamentId}/>
+      </div>
+    </>
+  } else {
+    return <>
+      <div>
+        <Fixture tournamentId={props.tournamentId}/>
+      </div>
+    </>
+  }
 }
 
-const Home = () => {
+const Home = (props:HomeProps) => {
   return (
     <div className="container">
-      <Carrousel />
-      <Hero />
-      <BestScorers />
+      <Carrousel tournamentId={props.tournamentId} />
+      <Hero tournamentId={props.tournamentId}/>
+      <BestScorers tournamentId={props.tournamentId}/>
     </div>
   )
 }

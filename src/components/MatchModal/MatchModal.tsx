@@ -7,6 +7,7 @@ import {players} from "../../data/players"
 import {goals} from "../../data/goals"
 
 interface MatchModalPropsTypes {
+  tournamentId: string;
   currentMatchModal: {id: string; localName: string; visitorName: string; localScore: number; visitorScore: number; isPlayoff: boolean
     stage: string; localScorePenalties: number; visitorScorePenalties: number; date: string; time: string; done: boolean; urlLocal: string
     urlVisitor: string; localTeamId: string; visitorTeamId: string; urlVideo: string|undefined} | undefined
@@ -64,14 +65,14 @@ const PlayedMatchModal = (props: playedMatchModalProps) => {
 
 const MatchModal = (props:MatchModalPropsTypes) => {
 
-  const filterGoalsForMatchId = goals.filter(goal=>{return goal.matchId===props.currentMatchModal?.id})
+  const filterGoalsForMatchId = goals[parseInt(props.tournamentId)-1].filter(goal=>{return goal.matchId===props.currentMatchModal?.id})
 
   const teamGoals = (teamId:String) => {
-    let teamPlayers = teams.find(team=>team.id===teamId)!.player_ids
+    let teamPlayers = teams[parseInt(props.tournamentId)-1].find(team=>team.id===teamId)!.player_ids
     let scorersList = []
 
     for(let i:number = 0; i<teamPlayers?.length; i++ ){
-      let playerName = players.find(player=>teamPlayers[i]===player.id)
+      let playerName = players[parseInt(props.tournamentId)-1].find(player=>teamPlayers[i]===player.id)
       let playerGoals = filterGoalsForMatchId.filter(goal=>{return teamPlayers[i]===goal.playerGoalId}).length
 
       for(let j:number = 0; j<playerGoals; j++){
@@ -81,7 +82,7 @@ const MatchModal = (props:MatchModalPropsTypes) => {
     return scorersList
   }
 
-  const quantityGoalsForPlayer = (scorersList: ({ id: string; name: string; number: string; picUrl: string; isCaptain: boolean; teamId: string; } | undefined)[]) => {
+  const quantityGoalsForPlayer = (scorersList: ({ id: string; name: string; number?: string; picUrl: string; isCaptain?: boolean; teamId: string; } | undefined)[]) => {
 
     let scorers:{name:string; picUrl:string; quantity:number}[] = []
 

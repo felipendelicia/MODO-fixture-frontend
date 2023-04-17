@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { goals } from "../../data/goals";
 import { players } from "../../data/players"
+import { HomeProps } from '../../views/Home';
 import "./Facts.css";
 
 const TotalGoals = () => {
@@ -20,7 +21,7 @@ const TotalGoals = () => {
     )
 }
 
-const MoreGoalsOneMatch = () => {
+const MoreGoalsOneMatch = (props: HomeProps) => {
     interface IGoals {
         id: string,
         matchId: string,
@@ -32,7 +33,7 @@ const MoreGoalsOneMatch = () => {
 
     useEffect(() => {
         const matches: IGoals[][] = []
-        const sortedGoals = goals.sort((a, b) => (a.matchId > b.matchId) ? 1 : -1);
+        const sortedGoals = goals[parseInt(props.tournamentId)-1].sort((a, b) => (a.matchId > b.matchId) ? 1 : -1);
         for (let i = 0; i < sortedGoals.length; i++) {
             if (matches.length) {
                 const lastMatch = matches[matches.length - 1];
@@ -57,7 +58,7 @@ const MoreGoalsOneMatch = () => {
             }
         }
 
-        const name = players.find((player: any) => player.id === candidate.id)?.name;
+        const name = players[parseInt(props.tournamentId)-1].find((player: any) => player.id === candidate.id)?.name;
 
         setFact({ title: "Más goles en un partido", content: `${name} (${candidate.goals})` })
     }, []);
@@ -76,7 +77,7 @@ const Fact = (props: any) => {
     return props.children
 }
 
-const Facts = () => {
+const Facts = (props: HomeProps) => {
     const CURRENT_FACT_LIMIT = 1;
     const [currentFact, setCurrentFact] = useState<number>(0)
 
@@ -95,7 +96,7 @@ const Facts = () => {
         <>
             <Fact>
                 {
-                    currentFact === 0? <MoreGoalsOneMatch /> : null                
+                    currentFact === 0? <MoreGoalsOneMatch tournamentId={props.tournamentId} /> : null                
                 }
                 {
                     currentFact === 1? <TotalGoals /> : null
