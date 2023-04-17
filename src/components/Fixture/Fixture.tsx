@@ -56,7 +56,7 @@ const Fixture = (props: any) => {
     });
 
     setTeamsList(currentTeams)
-  }, [])
+  }, [props.tournamentId])
 
   return (
     <>

@@ -67,7 +67,7 @@ const Carrousel = (props:any) => {
         } else {
           setCurrentMatch(currentMatches.find((match)=>{return match.done===false}));
         }
-    },[])
+    },[props.tournamentId])
 
     const nextMatch = () => {
       let currentMatchIdNumber = parseInt(currentMatch?.id as string)

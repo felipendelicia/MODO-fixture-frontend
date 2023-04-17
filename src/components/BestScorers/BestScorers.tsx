@@ -97,7 +97,7 @@ const BestScorers = (props:any) => {
         } else {
             setPlayersList(groupedPlayers.slice(0, 3))
         }
-    }, [showAll])
+    }, [showAll, props.tournamentId])
 
     const ToggleShow = () => {
         setShowAll(!showAll)
