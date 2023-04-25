@@ -65,7 +65,14 @@ const Carrousel = (props:any) => {
         if (!currentMatches.find((match)=>{return match.done===false})) {
           setCurrentMatch(currentMatches[currentMatches.length-1]);
         } else {
-          setCurrentMatch(currentMatches.find((match)=>{return match.done===false}));
+          let counter = 0;
+          for (let match of currentMatches) {
+            if (match.done === false) {
+              break;
+            }
+            counter++;
+          }
+          setCurrentMatch(currentMatches[counter-1]);
         }
     },[props.tournamentId])
 

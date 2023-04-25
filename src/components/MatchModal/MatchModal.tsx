@@ -5,6 +5,10 @@ import "./PlayedMatchVideoButton.css"
 import {teams} from "../../data/teams"
 import {players} from "../../data/players"
 import {goals} from "../../data/goals"
+import {cards} from "../../data/cards"
+
+const URL_YELLOW_CARD = "https://user-images.githubusercontent.com/55720621/234161803-8527d836-c56c-44c8-9e9b-fb98ddd975ce.png";
+const URL_RED_CARD = "https://user-images.githubusercontent.com/55720621/234161808-c23581d5-e543-4c0b-8c21-0b332bcb1ee9.png";
 
 interface MatchModalPropsTypes {
   tournamentId: string;
@@ -13,9 +17,14 @@ interface MatchModalPropsTypes {
     urlVisitor: string; localTeamId: string; visitorTeamId: string; urlVideo: string|undefined} | undefined
 }
 
-interface playedMatchModalProps {
+interface Card { id: string; matchId: string; playerId: string; teamId: string; type: string };
+
+interface PlayedMatchModalProps {
+  localCards: Card[];
   localScorers: { name: string; picUrl: string; quantity: number; }[];
-  visitorScorers: { name: string; picUrl: string; quantity: number; }[]
+  visitorCards: Card[];
+  visitorScorers: { name: string; picUrl: string; quantity: number; }[];
+  tournamentId: string;
 }
 
 const PlayedMatchVideoButton = (props:{videoURL:string}) => {
@@ -28,7 +37,21 @@ const PlayedMatchVideoButton = (props:{videoURL:string}) => {
   )
 }
 
-const PlayedMatchModal = (props: playedMatchModalProps) => {
+const returnCardForPlayer = (card: Card, tournamentId: string) => {
+  const p = players[parseInt(tournamentId)-1].find((p: any) => p.id === card.playerId);
+  const name = p?.name;
+  const urlPic = p?.picUrl;
+  const urlColor = card.type === "red"? URL_RED_CARD : URL_YELLOW_CARD;
+  return(
+    <div className="player-scorer-container">
+      <img src={urlColor} alt={`${card.type} card`}/>
+      <img src={urlPic} alt={name}/>
+      <p>{name}</p>
+    </div>
+  )
+};
+
+const PlayedMatchModal = (props: PlayedMatchModalProps) => {
   return (
     <div className='playedmatch-modal-container'>
       <div className='players-scorers-playedmatch-main'>
@@ -44,6 +67,11 @@ const PlayedMatchModal = (props: playedMatchModalProps) => {
               )
             })
           }
+          {
+            props.localCards.map((card)=>{
+              return returnCardForPlayer(card, props.tournamentId);
+            })
+          }
         </div>
         <div className="players-scorers-playedmatch">
           {
@@ -55,6 +83,11 @@ const PlayedMatchModal = (props: playedMatchModalProps) => {
                   <p>{player?.name}</p>
                 </div>
               )
+            })
+          }
+          {
+            props.visitorCards.map((card)=>{
+              return returnCardForPlayer(card, props.tournamentId);
             })
           }
         </div>
@@ -101,6 +134,10 @@ const MatchModal = (props:MatchModalPropsTypes) => {
     return scorers
   }
 
+  const getCardsForPlayer = (teamId?: string, matchId?: string) => {
+    return cards[parseInt(props.tournamentId)-1].filter((card: any) => card.matchId === matchId && card.teamId === teamId);
+  }
+
   const currentMatchModal = {
     localName:              props.currentMatchModal?.localName,
     visitorName:            props.currentMatchModal?.visitorName,
@@ -120,6 +157,8 @@ const MatchModal = (props:MatchModalPropsTypes) => {
     urlVideo:               props.currentMatchModal?.urlVideo,
     localScorers:           quantityGoalsForPlayer(teamGoals(props.currentMatchModal?.localTeamId as string)),
     visitorScorers:         quantityGoalsForPlayer(teamGoals(props.currentMatchModal?.visitorTeamId as string)),
+    localCards:             getCardsForPlayer(props.currentMatchModal?.localTeamId, props.currentMatchModal?.id),
+    visitorCards:           getCardsForPlayer(props.currentMatchModal?.visitorTeamId, props.currentMatchModal?.id),
   }
 
   return (
@@ -152,8 +191,11 @@ const MatchModal = (props:MatchModalPropsTypes) => {
 
         {
           currentMatchModal.done === true &&
-          <PlayedMatchModal 
+          <PlayedMatchModal
+          tournamentId = {props.tournamentId}
+          localCards = {currentMatchModal.localCards}
           localScorers={currentMatchModal.localScorers}
+          visitorCards = {currentMatchModal.visitorCards}
           visitorScorers={currentMatchModal.visitorScorers}/>
         }
 
