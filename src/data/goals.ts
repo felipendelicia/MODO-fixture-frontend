@@ -1781,14 +1781,14 @@ export const goals = [
         {
             "id": "35",    
             "matchId": "3",
-            "playerGoalId": "71",
+            "playerGoalId": "2",
             "teamId": "1",
             "teamReceivedId": "4"
         },
         {
             "id": "36",    
             "matchId": "3",
-            "playerGoalId": "71",
+            "playerGoalId": "4",
             "teamId": "1",
             "teamReceivedId": "4"
         },
