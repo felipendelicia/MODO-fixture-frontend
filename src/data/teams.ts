@@ -92,8 +92,8 @@ export const teams = [
     [
         {
             id: '1',
-            name: 'Equipo 1',
-            player_ids: ['1','2','3','4','5','6','7','8','9','10','11'],
+            name: 'Billetera Cósmica',
+            player_ids: ['1','2','3','4','5','6','7','8','9','10','11','67','70','71','50'],
             points: 0,
             wins: 0,
             draws: 0,
@@ -119,25 +119,25 @@ export const teams = [
             points: 0,
             wins: 0,
             draws: 0,
-            defeats: 0,
+            defeats: 1,
             group:"b",
-            url: "https://user-images.githubusercontent.com/55720621/232337168-d7f10102-1dad-41d6-825a-744b10861772.png"
+            url: "https://user-images.githubusercontent.com/55720621/234153209-599b91c5-fe9d-4af2-8349-47d1fffc34d2.jpg"
         },
         {
             id: '4',
-            name: 'Equipo 4',
+            name: 'MODO United',
             player_ids: ['32','33','34','35','36','37','38','39','40','41','42'],
-            points: 0,
-            wins: 0,
+            points: 3,
+            wins: 1,
             draws: 0,
             defeats: 1,
             group:"a",
-            url: "https://user-images.githubusercontent.com/55720621/232337176-ded351d2-1926-49d7-a246-0bffa154309e.png"
+            url: "https://user-images.githubusercontent.com/55720621/234153213-7dce63c7-aafb-4be7-b85a-cb71d0430072.png"
         },
         {
             id: '5',
             name: 'Raspar y Ganar',
-            player_ids: ['43','44','45','46','47','48','49','50','51','52','64'],
+            player_ids: ['43','44','45','46','47','48','49','51','52','64','65','66'],
             points: 3,
             wins: 1,
             draws: 0,
@@ -147,14 +147,14 @@ export const teams = [
         },
         {
             id: '6',
-            name: 'Equipo 6',
-            player_ids: ['53','54','55','56','57','58','59','60','61','62','63'],
-            points: 0,
-            wins: 0,
+            name: 'TyC Sports',
+            player_ids: ['53','54','55','56','57','58','59','60','61','62','63','68','69'],
+            points: 3,
+            wins: 1,
             draws: 0,
             defeats: 1,
             group:"b",
-            url: "https://user-images.githubusercontent.com/55720621/232337174-077a639e-c119-4701-9da5-ffabc2c481ca.png"
+            url: "https://user-images.githubusercontent.com/55720621/234153232-62b74669-53bf-4e89-ba05-4507f18be916.png"
         }
     ]
 ]

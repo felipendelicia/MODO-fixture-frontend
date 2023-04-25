@@ -784,206 +784,248 @@ export const players = [
         {
             "id": "31",
             "name": "Ivan Arinovich",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U0225GLLL2U-967d668cd668-512",
             "teamId": "3"
         },
         {
             "id": "32",
             "name": "Belen Godoy",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U02HJGB2Q5B-acd52207cf50-512",
             "teamId": "4"
         },
         {
             "id": "33",
             "name": "Nahuel Calello",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U02454BRREH-197afb7c233c-512",
             "teamId": "4"
         },
         {
             "id": "34",
             "name": "Franco Gaito",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03L2KT42S3-c1a3cf6084af-512",
             "teamId": "4"
         },
         {
             "id": "35",
             "name": "Jonathan Almeida",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03DCE34NG2-cf1a375e23ab-512",
             "teamId": "4"
         },
         {
             "id": "36",
             "name": "Facundo Terz",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U02RWURMW04-c6c68ac6d5fa-512",
             "teamId": "4"
         },
         {
             "id": "37",
             "name": "Lean Colisko",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03FHF9DHEG-9acbc4b04c98-512",
             "teamId": "4"
         },
         {
             "id": "38",
             "name": "Agustin Kearney",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U0491KL1DEJ-5857b3ec32a7-512",
             "teamId": "4"
         },
         {
             "id": "39",
             "name": "Enrique Sanchez",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U042MMH2SJH-88c06a22b55d-512",
             "teamId": "4"
         },
         {
             "id": "40",
             "name": "Carolina del Carmen",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U01D93G5RK3-b950d454db68-512",
             "teamId": "4"
         },
         {
             "id": "41",
             "name": "Hernan Guebel",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03BF4F29SL-f10fcc3dd338-512",
             "teamId": "4"
         },
         {
             "id": "42",
             "name": "Victoria Gomez Roset",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03JYC1V0LF-46e19b40ea12-512",
             "teamId": "4"
         },
         {
             "id": "43",
             "name": "Julian Rosenfeld",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U02E72Y9B37-e38ef0cd6aa3-512",
             "teamId": "5"
         },
         {
             "id": "44",
             "name": "Shima",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U02LLUA7U4V-d296a1ecb8b3-512",
             "teamId": "5"
         },
         {
             "id": "45",
             "name": "Vlady",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U02H6TE6URM-b21a1a28dfd5-512",
             "teamId": "5"
         },
         {
             "id": "46",
             "name": "Martin Kraitman",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U04NVGKNK70-e490ec4cf97c-512",
             "teamId": "5"
         },
         {
             "id": "47",
             "name": "Nicolas Bugallo",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U01UVAYST1Q-4aab90377958-512",
             "teamId": "5"
         },
         {
             "id": "48",
             "name": "Ignacio Reyna",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U019XLJQWB0-50da217f5cf8-512",
             "teamId": "5"
         },
         {
             "id": "49",
             "name": "Celeste Brizzi",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03U6SGCHRU-c1c0f779514a-512",
             "teamId": "5"
         },
         {
             "id": "50",
-            "name": "Nicolas Bugallo",
-            "picUrl": "./assets/img/favicon.png",
-            "teamId": "5"
+            "name": "Pablo Battro",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U01GHJL7286-972a8d3ee6e6-512",
+            "teamId": "1"
         },
         {
             "id": "51",
             "name": "Martin Kuszczak",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U02S6P942D7-00ea99b8363d-512",
             "teamId": "5"
         },
         {
             "id": "52",
             "name": "Mic Martin",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03T7G9V15E-84581164f0d7-512",
             "teamId": "5"
         },
         {
             "id": "53",
             "name": "Santiago Muller",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U01P2CXGFRS-855e12a779d3-512",
             "teamId": "6"
         },
         {
             "id": "54",
             "name": "Lucas Zanetti",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U01LXF52L4C-343a6aa03571-512",
             "teamId": "6"
         },
         {
             "id": "55",
             "name": "Belen Gonzalez Lojk",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U02SJBP7788-1439c6162e41-512",
             "teamId": "6"
         },
         {
             "id": "56",
             "name": "Mateo Silguero",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U04NVGK9CB0-d0a06c6ae927-512",
             "teamId": "6"
         },
         {
             "id": "57",
             "name": "Daniel Huanca Piza",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U02SJD70NKS-182ca2dfe846-512",
             "teamId": "6"
         },
         {
             "id": "58",
             "name": "Fer Mac Dougall",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03UHP1TEKA-d793b3ea3d03-512",
             "teamId": "6"
         },
         {
             "id": "59",
             "name": "Josefina Rossi",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03GXMNF99P-fac8c43e4a09-512",
             "teamId": "6"
         },
         {
             "id": "60",
             "name": "Julieta Rehak",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U040MJH3B60-8e0722f123ea-512",
             "teamId": "6"
         },
         {
             "id": "61",
             "name": "Fernando Gentili",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U037QU62BPV-9d44256ca1b7-512",
             "teamId": "6"
         },
         {
             "id": "62",
             "name": "Gonzalo Berro",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U04M1HQDMCN-349a1449a5c8-512",
             "teamId": "6"
         },
         {
             "id": "63",
             "name": "Pehue",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U01VAGG4TD1-492183fc7e9b-512",
             "teamId": "6"
         },
         {
             "id": "64",
             "name": "Nicolas Gomes",
-            "picUrl": "./assets/img/favicon.png",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U03NJSL0D6C-182fff7a240e-512",
             "teamId": "5"
+        },
+        {
+            "id": "65",
+            "name": "Agostina Castellazzo",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U04AKD7RS4B-1b32da2b2d94-512",
+            "teamId": "5"
+        },
+        {
+            "id": "66",
+            "name": "María Belén Parma",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U04N0S6U57G-ebf04906c93b-512",
+            "teamId": "5"
+        },
+        {
+            "id": "67",
+            "name": "Ramiro Lopez Muollo",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U04L9LR60F3-19075c9a9834-512",
+            "teamId": "1"
+        },
+        {
+            "id": "68",
+            "name": "Agustin Bajo",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U04H512SWTD-6d503c621cad-512",
+            "teamId": "6"
+        },
+        {
+            "id": "69",
+            "name": "Juan Martín Gualdoni",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U04JNU3CXQT-61a099d5de7b-512",
+            "teamId": "6"
+        },
+        {
+            "id": "70",
+            "name": "Fede Biondi",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U053C7R196J-dce66aa28afe-512",
+            "teamId": "1"
+        },
+        {
+            "id": "71",
+            "name": "Ramiro Lopez",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U04L9LR60F3-19075c9a9834-512",
+            "teamId": "1"
         },
     ]
 ]
