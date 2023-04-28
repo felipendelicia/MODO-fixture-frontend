@@ -1027,5 +1027,11 @@ export const players = [
             "picUrl": "https://ca.slack-edge.com/T01062DGEET-U04L9LR60F3-19075c9a9834-512",
             "teamId": "1"
         },
+        {
+            "id": "72",
+            "name": "Dark Pablo Battro",
+            "picUrl": "https://ca.slack-edge.com/T01062DGEET-U01GHJL7286-972a8d3ee6e6-512",
+            "teamId": "3"
+        },
     ]
 ]

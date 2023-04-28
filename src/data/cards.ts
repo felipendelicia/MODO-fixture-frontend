@@ -120,11 +120,18 @@ export const cards = [
             teamId: "6",
         },
         {
-            id: "1",
+            id: "2",
             playerId: "27",
             type: 'yellow',
             matchId: "4",
             teamId: "3",
-        },  
+        },
+        {
+            id: "3",
+            playerId: "43",
+            type: 'yellow',
+            matchId: "6",
+            teamId: "5",
+        },
     ]
 ]

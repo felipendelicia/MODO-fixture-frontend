@@ -115,7 +115,7 @@ export const teams = [
         {
             id: '3',
             name: 'Deportivo MODÓN',
-            player_ids: ['22','23','24','25','26','27','28','29','30','31'],
+            player_ids: ['22','23','24','25','26','27','28','29','30','31','72'],
             points: 0,
             wins: 0,
             draws: 0,
