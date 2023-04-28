@@ -288,29 +288,29 @@ export const matches = [
             id: '5',
             localId: '1',
             visitorId: '2',
-            localScore: 0,
-            visitorScore: 0,
+            localScore: 7,
+            visitorScore: 5,
             isPlayoff: false,
             stage: 'Fase de grupos',
             localScorePenalties: 0,
             visitorScorePenalties: 0,
             date: '2023-04-27',
             time: '19:00',
-            done: false
+            done: true
         },
         {
             id: '6',
             localId: '3',
             visitorId: '5',
-            localScore: 0,
-            visitorScore: 0,
+            localScore: 3,
+            visitorScore: 6,
             isPlayoff: false,
             stage: 'Fase de grupos',
             localScorePenalties: 0,
             visitorScorePenalties: 0,
             date: '2023-04-27',
             time: '19:00',
-            done: false
+            done: true
         },
     ]
 ]
