@@ -2044,5 +2044,12 @@ export const goals = [
             "teamId": "3",
             "teamReceivedId": "5"
         },
+        {
+            "id": "73",    
+            "matchId": "5",
+            "playerGoalId": "4",
+            "teamId": "1",
+            "teamReceivedId": "2"
+        },
     ]
 ]
