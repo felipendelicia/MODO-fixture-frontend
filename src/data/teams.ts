@@ -110,7 +110,7 @@ export const teams = [
             draws: 0,
             defeats: 1,
             group:"a",
-            url: "https://user-images.githubusercontent.com/55720621/232337169-caba4f17-1259-42c6-8cb5-d6abd22ef729.png"
+            url: "https://user-images.githubusercontent.com/55720621/235983317-8aac47a6-6a5e-45bf-9589-0aa2e4cbe15b.png"
         },
         {
             id: '3',

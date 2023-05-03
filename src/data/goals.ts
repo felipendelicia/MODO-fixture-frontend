@@ -1970,14 +1970,7 @@ export const goals = [
         {
             "id": "62",    
             "matchId": "5",
-            "playerGoalId": "17",
-            "teamId": "2",
-            "teamReceivedId": "1"
-        },
-        {
-            "id": "63",    
-            "matchId": "5",
-            "playerGoalId": "17",
+            "playerGoalId": "19",
             "teamId": "2",
             "teamReceivedId": "1"
         },
@@ -2051,5 +2044,6 @@ export const goals = [
             "teamId": "1",
             "teamReceivedId": "2"
         },
+        // CONTINUA EN 63 Y DESPUES 74
     ]
 ]
