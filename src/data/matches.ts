@@ -289,7 +289,7 @@ export const matches = [
             localId: '1',
             visitorId: '2',
             localScore: 7,
-            visitorScore: 5,
+            visitorScore: 4,
             isPlayoff: false,
             stage: 'Fase de grupos',
             localScorePenalties: 0,
